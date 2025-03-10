@@ -33,3 +33,7 @@ class WebImage(tk.Label):
 
         self.image = ImageTk.PhotoImage(image)
         self.configure(image=self.image)
+
+    def set_url(self, url: str) -> None:
+        self.url = url
+        self.setup_ui()

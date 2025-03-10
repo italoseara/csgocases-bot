@@ -5,13 +5,14 @@ from typing import Any
 from seleniumbase import Driver
 
 
-def get(url: str, cookies: list[dict[str, str]] = None, params: dict[str, str] = None) -> Any:
+def get(url: str, cookies: list[dict[str, str]] = None, params: dict[str, str] = None, driver: Driver = None) -> Any:
     """Make a GET request to a URL bypassing Cloudflare protection (it may be a lot slower than a normal request).
 
     Args:
         url (str): The URL to make the request to
         cookies (list[dict[str, str]]): A list of cookies to inject
         params (dict[str, str]): A dictionary of parameters to send with the request
+        driver (Driver): The driver to use for the request (if None, a new one will be created)
 
     Returns:
         Any: The response from the request
@@ -27,21 +28,23 @@ def get(url: str, cookies: list[dict[str, str]] = None, params: dict[str, str] =
     logging.getLogger("seleniumbase").setLevel(logging.CRITICAL)
 
     # Create the driver with headless option
-    driver = Driver(uc=True, headless=True)
+    _driver = driver or Driver(uc=True, headless=True)
     
     # Inject the cookies
     if cookies:
-        driver.uc_open_with_reconnect(base_url, 1)
+        _driver.uc_open_with_reconnect(base_url, 0)
         for cookie in cookies:
-            driver.add_cookie(cookie)
+            _driver.add_cookie(cookie)
 
     # Open the URL
-    driver.uc_open_with_reconnect(full_url, 2)
-    driver.uc_gui_click_captcha()
+    _driver.uc_open_with_reconnect(full_url, 0)
+    _driver.uc_gui_click_captcha()
 
     # Return the page source
-    soup = bs4.BeautifulSoup(driver.get_page_source(), "html.parser")
-    driver.quit()
+    soup = bs4.BeautifulSoup(_driver.get_page_source(), "html.parser")
+
+    if not driver:
+        _driver.quit()
 
     try:
         return json.loads(soup.text)

@@ -118,19 +118,23 @@ class XScraper(BaseScraper):
         response = requests.get(url, headers=headers, cookies=cookies, params=params)
         response.raise_for_status()
 
-        last_post = response.json()["data"]["user"]["result"]["timeline_v2"]["timeline"]["instructions"][1]["entries"][0]\
-            ["content"]
+        try:
+            last_post = response.json()["data"]["user"]["result"]["timeline_v2"]["timeline"]["instructions"][1]["entries"][0]\
+                ["content"]
 
-        if "itemContent" not in last_post:
-            last_post = last_post["items"][0]["item"]
+            if "itemContent" not in last_post:
+                last_post = last_post["items"][0]["item"]
 
-        last_post = last_post["itemContent"]["tweet_results"]["result"]["legacy"]
+            last_post = last_post["itemContent"]["tweet_results"]["result"]["legacy"]
 
-        last_post["user"] = {
-            "screen_name": self.username,
-            "url": f"https://x.com/{self.username}",
-        }
+            last_post["user"] = {
+                "screen_name": self.username,
+                "url": f"https://x.com/{self.username}",
+            }
 
-        self.app.log("Success.", prefix="")
+            self.app.log("Success.", prefix="")
 
-        return Post.from_x_post(last_post)
+            return Post.from_x_post(last_post)
+        except (KeyError, IndexError):
+            self.app.log("Failed.", prefix="")
+            return None

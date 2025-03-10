@@ -52,7 +52,9 @@ class Bot:
         self.app.log("Bot is running")
         
         latest_posts = [scraper.fetch_latest_post() for scraper in self.scrapers]
-        promocode_posts = [post for post in latest_posts if "promocode" in post.text.lower()]
+        promocode_posts = [post for post in latest_posts 
+                           if post is not None and 
+                           "promocode" in post.text.lower()]
 
         expired_promocodes = self.load_expired_promocodes()
         new_promocodes = self.extract_valid_promocodes(promocode_posts, expired_promocodes)
@@ -76,14 +78,17 @@ class Bot:
         url = "https://csgocases.com/api.php/add_wallet_code"
         cookies = [{ "name": "sfRemember", "value": self.app.cspro_cookie.get() }]
 
-        response = bypass.get(url, cookies=cookies, params={"code": promocode})
+        response = bypass.get(url, cookies=cookies, params={"code": promocode}, driver=self.app.driver)
         if response is None:
             return
 
         if "wallet" in response:
+            new_balance = float(response["wallet"])
             self.app.log(f"Promocode `{promocode}` successfully activated")
             self.app.log(response["message"])
-            self.app.log(f"New balance: ${response['wallet']}")
+            self.app.log(f"New balance: ${new_balance:.2f}")
+
+            self.app.user.set_balance(new_balance)
         else:
             self.app.log(f"Could not activate promocode `{promocode}`")
 

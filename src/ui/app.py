@@ -1,10 +1,12 @@
 import os
 import json
+import platform
 import threading
 import tkinter as tk
 import sv_ttk as svtk  # Only used to set the theme
 from tkinter import ttk
 from datetime import datetime
+from seleniumbase import Driver
 
 import bypass
 from bot import Bot
@@ -16,13 +18,18 @@ class App(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
 
+        w, h = 800, 540
+        if platform.system() == "Windows":
+            w, h = w + 51, h + 31  # Fix inconsistencies in window size
+
         self.title("Promocode Scraper")
-        self.geometry("800x520")
-        self.minsize(800, 520)
+        self.geometry(f"{w}x{h}")
+        self.minsize(w, h)
 
         self.setup_ui()
 
         self.bot = None
+        self.driver = Driver(uc=True, headless=True)
 
     def run(self) -> None:
         """Runs the application."""
@@ -113,29 +120,36 @@ class App(tk.Tk):
 
         self.create_log_section(bottom_right_frame)
 
-    def update_user(self, default: bool = False) -> None:
-        if hasattr(self, "user"):
-            self.user.destroy()
-                
-        default_avatar_url = "https://avatars.steamstatic.com/b5bd56c1aa4644a474a2e4972be27ef9e82e517e_full.jpg"
-        self.user = User(self.user_frame, "Not Found", default_avatar_url, 0.0)
-        self.user.pack(fill="both", expand=True)
-        
+    def update_user(self, default: bool = False, value: str = None) -> None:
+        if not hasattr(self, "user"):
+            default_avatar_url = "https://avatars.steamstatic.com/b5bd56c1aa4644a474a2e4972be27ef9e82e517e_full.jpg"
+            self.user = User(self.user_frame, "Not Found", default_avatar_url, 0.0)
+            self.user.pack(fill="both", expand=True)
+
         def _update_user() -> None:
-            if not self.cspro_cookie.get() or default:
+            self.log("Updating user information...")
+            
+            if not (cookie := value or self.cspro_cookie.get()):
+                self.log("Cookie not found")
                 return
 
-            cookies = [{ "name": "sfRemember", "value": self.cspro_cookie.get() }]
-            response = bypass.get("https://csgocases.com/api.php/auth", cookies=cookies)
+            cookies = [{ "name": "sfRemember", "value": cookie }]
+            response = bypass.get("https://csgocases.com/api.php/auth", cookies=cookies, driver=self.driver)
 
             if "success" not in response or not response["success"]:
                 return
 
-            self.user.destroy()
-            self.user = User(self.user_frame, response["user"]["nick"], response["user"]["avatar"], float(response["user"]["wallet"]))
-            self.user.pack(fill="both", expand=True)
+            username = response["user"]["nick"]
+            balance = float(response["user"]["wallet"])
 
-        threading.Thread(target=_update_user).start()
+            self.user.set_name(username)
+            self.user.set_balance(balance)
+            self.user.set_avatar_url(response["user"]["avatar"])
+
+            self.log(f"User information updated: {username} (${balance})")
+
+        if not default:
+            threading.Thread(target=_update_user).start()
 
     def create_user_section(self, frame: tk.Frame) -> None:
         """Creates the user section."""
@@ -165,6 +179,7 @@ class App(tk.Tk):
 
         self.cspro_cookie = EntryWithlabel(credentials_frame, label="CS.PRO Cookie (Optional)", secret=True)
         self.cspro_cookie.pack(fill="x", padx=10, pady=5)
+        self.cspro_cookie.entry.bind("<Control-v>", lambda event: self.update_user(value=self.clipboard_get()))
 
     def create_options_section(self, frame: tk.Frame) -> None:
         """Creates the options section."""
