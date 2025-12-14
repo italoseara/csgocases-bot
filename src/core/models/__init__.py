@@ -1,2 +1,2 @@
-from .app import QuestionApp
+from .post import Post
 from .promocode import Promocode

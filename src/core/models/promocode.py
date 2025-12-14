@@ -2,38 +2,33 @@ import os
 import easyocr
 import psycopg2
 import requests
+import numpy as np
 import undetected_chromedriver as uc
+
 from PIL import Image
 from io import BytesIO
-import numpy as np
 from dotenv import load_dotenv
+from dataclasses import dataclass
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 
-from util.driver import load_cookies
+from utils.driver import load_cookies
 from config import URL, DEBUG
 
 
 load_dotenv()
 
 
+@dataclass
 class Promocode:
     post_url: str
     image_url: str
 
-    _code: str
-    _image: Image.Image
-    _driver: uc.Chrome
-
-    def __init__(self, post_url: str, image_url: str = None) -> None:
-        self.post_url = post_url
-        self.image_url = image_url
-
-        self._code = None
-        self._image = None
-        self._driver = None
+    _code: str = None
+    _image: Image.Image = None
+    _driver: uc.Chrome = None
 
     @property
     def image(self) -> Image.Image:
