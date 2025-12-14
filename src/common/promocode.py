@@ -54,7 +54,7 @@ class Promocode:
 
             # Crop the image to focus on the code area
             width, height = image.size
-            image = image.crop((width * 0.1, width * 0.9, height * 0.62, height * 0.8))
+            image = image.crop((width * 0.1, height * 0.62, width * 0.9, height * 0.8))
             image = image.convert("RGB")
 
             reader = easyocr.Reader(["en"], gpu=True)
