@@ -1,16 +1,12 @@
+import json
 from core.models import Promocode
-from integrations.instagram import InstagramAPI
+from integrations import InstagramAPI, XTwitterAPI
 
 
 def main() -> None:
-    # promocode = Promocode(
-    #     "https://x.com/csgocasescom/status/1998825144442089497/photo/1",
-    #     "https://pbs.twimg.com/media/G71A30pXMAA88Uv?format=jpg&name=medium",
-    # )
-    # print(promocode.code)
-    client = InstagramAPI()
-    profile = client.fetch_latest_post("csgocasescom")
-    print(profile)
+    client = XTwitterAPI()
+    post = client.fetch_latest_post("csgocasescom")
+    print(post)
 
 
 if __name__ == "__main__":

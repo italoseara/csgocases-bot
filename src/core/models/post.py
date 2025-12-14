@@ -7,6 +7,7 @@ from typing import Literal, Optional, Any
 class Post:
     platform: Literal["Instagram", "X", "Facebook", "Discord"]
     author: str
+    author_url: str
     text: Optional[str]
     url: str
     media_url: Optional[str]
