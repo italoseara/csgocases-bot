@@ -1,12 +1,12 @@
 import os
+import easyocr
 import psycopg2
 import requests
 import undetected_chromedriver as uc
 from PIL import Image
 from io import BytesIO
+import numpy as np
 from dotenv import load_dotenv
-from google import genai
-from google.genai import types
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
@@ -50,44 +50,18 @@ class Promocode:
         """Get the promocode text."""
 
         if self._code is None and self.image_url:
-            try:
-                client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-                response = client.models.list()
-                print(response.page)
-                
-                response = client.models.generate_content(
-                    model="gemini-2.5-flash",
-                    contents=[
-                        types.Part.from_uri(file_uri=self.image_url, mime_type="image/jpeg"),
-                        (
-                            "**System / Instruction Prompt for the Agent:**\n"
-                            "You are an AI assistant that extracts promo codes from images.\n"
-                            "\n"
-                            "* Your only job is to detect and return the promo code text exactly as it appears in the image.\n"
-                            "* Promo codes may contain letters, numbers, or both.\n"
-                            "* Do not include extra words, symbols, or formatting. Return only the code itself.\n"
-                            '* The promo code is bellow the word "PROMOCODE" and above a "like" or "heart" symbol.\n'
-                            '* The word "PROMOCODE" is NOT a promo code.\n'
-                            "* Output nothing else beyond the code.\n"
-                            "\n"
-                            "**Expected Output Examples:**\n"
-                            "\n"
-                            "* If the promo code in the image is 'FB12', respond with:\n"
-                            "  FB12\n"
-                            "* If the promo code in the image is 'DC10', respond with:\n"
-                            "  DC10\n"
-                        ),
-                    ],
-                    config=types.GenerateContentConfig(
-                        temperature=0.0,
-                        max_output_tokens=500,
-                        top_p=0.8,
-                    ),
-                )
+            image = self.image
 
-                self._code = response.text.strip()
-            except Exception as e:
-                print(f"Error extracting promocode: {e}")
+            # Crop the image to focus on the code area
+            width, height = image.size
+            image = image.crop((width * 0.1, width * 0.9, height * 0.62, height * 0.8))
+            image = image.convert("RGB")
+
+            reader = easyocr.Reader(["en"], gpu=True)
+            result = reader.readtext(np.array(image), allowlist="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", detail=0)
+
+            if result:
+                self._code = result[0].strip()
 
         return self._code
 
