@@ -1,24 +1,19 @@
-import os
 import easyocr
-import psycopg2
 import requests
 import numpy as np
 import undetected_chromedriver as uc
 
 from PIL import Image
 from io import BytesIO
-from dotenv import load_dotenv
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 
-from utils.driver import load_cookies
 from config import URL, DEBUG
-
-
-load_dotenv()
+from utils.driver import load_cookies
+from core.repositories import PromocodeRepository
 
 
 @dataclass
@@ -26,9 +21,10 @@ class Promocode:
     post_url: str
     image_url: str
 
-    _code: str = None
-    _image: Image.Image = None
-    _driver: uc.Chrome = None
+    _code: str = field(default=None, repr=False)
+    _image: Image.Image = field(default=None, repr=False)
+    _driver: uc.Chrome = field(default=None, repr=False)
+    _repository: PromocodeRepository = field(default_factory=PromocodeRepository, repr=False)
 
     @property
     def image(self) -> Image.Image:
@@ -59,61 +55,6 @@ class Promocode:
                 self._code = result[0].strip()
 
         return self._code
-
-    def connect_db(self) -> psycopg2.extensions.connection:
-        """Connect to the PostgreSQL database."""
-
-        return psycopg2.connect(
-            user=os.getenv("DB_USER"),
-            password=os.getenv("DB_PASSWORD"),
-            host=os.getenv("DB_HOST"),
-            port=os.getenv("DB_PORT"),
-            dbname=os.getenv("DB_NAME"),
-        )
-
-    def store(self) -> None:
-        """Store promocode in a remote database."""
-
-        if not self.code:
-            print("No promocode to store.")
-            return
-
-        if self.exists():
-            print("Promocode already exists in the database.")
-            return
-
-        try:
-            with self.connect_db() as conn:
-                with conn.cursor() as cursor:
-                    insert_query = """
-                    INSERT INTO promocodes (code, post_url)
-                    VALUES (%s, %s)
-                    """
-
-                    cursor.execute(insert_query, (self.code, self.post_url))
-                    conn.commit()
-            print("Promocode stored successfully.")
-        except Exception as e:
-            print(f"Database error: {e}")
-
-    def exists(self) -> bool:
-        """Check if a promocode exists by post URL."""
-
-        try:
-            with self.connect_db() as conn:
-                with conn.cursor() as cursor:
-                    select_query = """
-                    SELECT EXISTS(
-                        SELECT 1 FROM promocodes WHERE post_url = %s
-                    )
-                    """
-
-                    cursor.execute(select_query, (self.post_url,))
-                    exists = cursor.fetchone()[0]
-            return exists
-        except Exception as e:
-            print(f"Database error: {e}")
-            return False
 
     def claim(self) -> dict:
         """Claim a promocode on the website."""
