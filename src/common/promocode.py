@@ -1,7 +1,12 @@
 import os
 import psycopg2
+import requests
 import undetected_chromedriver as uc
+from PIL import Image
+from io import BytesIO
 from dotenv import load_dotenv
+from google import genai
+from google.genai import types
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
@@ -15,25 +20,94 @@ load_dotenv()
 
 
 class Promocode:
-    def __init__(self, post_url: str) -> None:
-        self.post_url = post_url
-        self.code = None
+    post_url: str
+    image_url: str
 
+    _code: str
+    _image: Image.Image
+    _driver: uc.Chrome
+
+    def __init__(self, post_url: str, image_url: str = None) -> None:
+        self.post_url = post_url
+        self.image_url = image_url
+
+        self._code = None
+        self._image = None
         self._driver = None
 
-    def connect_db(self) -> psycopg2.connection:
+    @property
+    def image(self) -> Image.Image:
+        """Get the promocode image."""
+
+        if self._image is None and self.image_url:
+            response = requests.get(self.image_url)
+            self._image = Image.open(BytesIO(response.content))
+
+        return self._image
+
+    @property
+    def code(self) -> str:
+        """Get the promocode text."""
+
+        if self._code is None and self.image_url:
+            try:
+                client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+                response = client.models.list()
+                print(response.page)
+                
+                response = client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=[
+                        types.Part.from_uri(file_uri=self.image_url, mime_type="image/jpeg"),
+                        (
+                            "**System / Instruction Prompt for the Agent:**\n"
+                            "You are an AI assistant that extracts promo codes from images.\n"
+                            "\n"
+                            "* Your only job is to detect and return the promo code text exactly as it appears in the image.\n"
+                            "* Promo codes may contain letters, numbers, or both.\n"
+                            "* Do not include extra words, symbols, or formatting. Return only the code itself.\n"
+                            '* The promo code is bellow the word "PROMOCODE" and above a "like" or "heart" symbol.\n'
+                            '* The word "PROMOCODE" is NOT a promo code.\n'
+                            "* Output nothing else beyond the code.\n"
+                            "\n"
+                            "**Expected Output Examples:**\n"
+                            "\n"
+                            "* If the promo code in the image is 'FB12', respond with:\n"
+                            "  FB12\n"
+                            "* If the promo code in the image is 'DC10', respond with:\n"
+                            "  DC10\n"
+                        ),
+                    ],
+                    config=types.GenerateContentConfig(
+                        temperature=0.0,
+                        max_output_tokens=500,
+                        top_p=0.8,
+                    ),
+                )
+
+                self._code = response.text.strip()
+            except Exception as e:
+                print(f"Error extracting promocode: {e}")
+
+        return self._code
+
+    def connect_db(self) -> psycopg2.extensions.connection:
         """Connect to the PostgreSQL database."""
 
-        USER = os.getenv("DB_USER")
-        PASSWORD = os.getenv("DB_PASSWORD")
-        HOST = os.getenv("DB_HOST")
-        PORT = os.getenv("DB_PORT")
-        DBNAME = os.getenv("DB_NAME")
-
-        return psycopg2.connect(user=USER, password=PASSWORD, host=HOST, port=PORT, dbname=DBNAME)
+        return psycopg2.connect(
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            host=os.getenv("DB_HOST"),
+            port=os.getenv("DB_PORT"),
+            dbname=os.getenv("DB_NAME"),
+        )
 
     def store(self) -> None:
-        """Store cookies in a remote database."""
+        """Store promocode in a remote database."""
+
+        if not self.code:
+            print("No promocode to store.")
+            return
 
         if self.exists():
             print("Promocode already exists in the database.")
@@ -72,13 +146,11 @@ class Promocode:
             print(f"Database error: {e}")
             return False
 
-    def get(self) -> str:
-        """Use an LLM (Gemini) to read and set the promocode."""
-
-        raise NotImplementedError("LLM integration not implemented.")
-
     def claim(self) -> dict:
         """Claim a promocode on the website."""
+
+        if not self.code:
+            return {"status": "error", "message": "Code not available."}
 
         try:
             self._driver = uc.Chrome(headless=not DEBUG, use_subprocess=False)
@@ -129,10 +201,3 @@ class Promocode:
             return {"status": "error", "message": str(e)}
         finally:
             self._driver.quit()
-
-
-if __name__ == "__main__":
-    promocode = Promocode("YOUR_PROMOCODE_HERE")
-    promocode.store()
-    # result = promocode.claim()
-    # print(result)
