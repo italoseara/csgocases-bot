@@ -28,22 +28,21 @@ class XTwitterAPI:
             with open("data/mock_x_user.json", "r", encoding="utf-8") as f:
                 response = json.load(f)
         else:
-            headers = {
-                "Authorization": f"Bearer {BEARER_TOKEN}",
-                "User-Agent": USER_AGENT,
-                "X-CSRF-Token": self.csrf_token,
-            }
-
-            cookies = {
-                "auth_token": self.auth_token,
-                "ct0": self.csrf_token,
-            }
-
-            params = {
-                "variables": json.dumps({"screenName": username}),
-            }
-
-            response = requests.get(self.BASE_USER_BY_SCREEN_NAME_URL, headers=headers, cookies=cookies, params=params)
+            response = requests.get(
+                self.BASE_USER_BY_SCREEN_NAME_URL,
+                headers={
+                    "Authorization": f"Bearer {BEARER_TOKEN}",
+                    "User-Agent": USER_AGENT,
+                    "X-CSRF-Token": self.csrf_token,
+                },
+                cookies={
+                    "auth_token": self.auth_token,
+                    "ct0": self.csrf_token,
+                },
+                params={
+                    "variables": json.dumps({"screenName": username}),
+                },
+            )
             if response.status_code != 200:
                 return ""
 

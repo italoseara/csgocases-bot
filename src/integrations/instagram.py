@@ -14,13 +14,11 @@ class InstagramAPI:
         self,
         app_id: str = "936619743392459",
         server_id: str = "1031060024",
-        default_timeout: float = 10.0,
     ) -> None:
         self.app_id = app_id
         self.server_id = server_id
-        self.default_timeout = default_timeout
 
-    def fetch_profile(self, username: str, timeout: Optional[float] = None) -> Optional[dict[str, Any]]:
+    def fetch_profile(self, username: str) -> Optional[dict[str, Any]]:
         if DEBUG:  # Mock response for debugging
             with open("data/mock_instagram_profile.json", "r", encoding="utf-8") as f:
                 response = json.load(f)
@@ -29,14 +27,10 @@ class InstagramAPI:
                 self.BASE_PROFILE_API_ENDPOINT,
                 headers={
                     "User-Agent": USER_AGENT,
-                    "Accept": "*/*",
-                    "Accept-Language": "en-US,en;q=0.9",
-                    "X-Requested-With": "XMLHttpRequest",
                     "X-IG-App-ID": self.app_id,
                     "X-Instagram-AJAX": self.server_id,
                 },
                 params={"username": username},
-                timeout=timeout or self.default_timeout,
             )
             if response.status_code != 200:
                 return None
@@ -45,8 +39,8 @@ class InstagramAPI:
 
         return response.get("data", {}).get("user", None)
 
-    def fetch_latest_post(self, username: str, timeout: Optional[float] = None) -> Optional[Post]:
-        profile = self.fetch_profile(username, timeout=timeout)
+    def fetch_latest_post(self, username: str) -> Optional[Post]:
+        profile = self.fetch_profile(username)
         if not profile:
             return None
 

@@ -21,14 +21,14 @@ class DiscordAPI:
             with open("data/mock_discord_messages.json", "r", encoding="utf-8") as f:
                 response = json.load(f)
         else:
-            headers = {
-                "Authorization": self.auth_token,
-                "User-Agent": USER_AGENT,
-            }
-
-            params = {"limit": 1}
-
-            response = requests.get(self.BASE_MESSAGES_URL.format(channel_id=channel_id), headers=headers, params=params)
+            response = requests.get(
+                self.BASE_MESSAGES_URL.format(channel_id=channel_id),
+                headers={
+                    "Authorization": self.auth_token,
+                    "User-Agent": USER_AGENT,
+                },
+                params={"limit": 1},
+            )
             if response.status_code != 200:
                 return None
 
