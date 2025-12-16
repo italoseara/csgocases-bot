@@ -1,1 +1,1 @@
-from .app import QuestionApp
+from .app import CSGOCasesApp

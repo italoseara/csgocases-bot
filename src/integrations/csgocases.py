@@ -21,10 +21,14 @@ class CSGOCasesAPI:
         self.driver = None
 
     def __enter__(self) -> Self:
+        """Initialize the web driver."""
+
         self.driver = uc.Chrome(headless=not DEBUG, use_subprocess=False)
         return self
 
     def __exit__(self, exc_type, exc_value, traceback) -> None:
+        """Quit the web driver."""
+
         self.driver.quit()
 
     def claim_promocode(self, promocode: str) -> None:
