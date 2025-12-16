@@ -1,1 +1,1 @@
-from .promocode_repository import PromocodeRepository
+from .promocode import PromocodeRepository

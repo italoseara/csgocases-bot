@@ -2,8 +2,8 @@ import os
 import json
 import requests
 import base64
+from typing import Optional
 from datetime import datetime
-from typing import Optional, Any
 from dotenv import load_dotenv
 
 from core.models import Post
