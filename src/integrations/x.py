@@ -6,7 +6,7 @@ from typing import Optional
 from datetime import datetime
 from dotenv import load_dotenv
 
-from tui.models import Post
+from models import Post
 from config import DEBUG, BEARER_TOKEN, USER_AGENT
 
 
@@ -14,7 +14,9 @@ load_dotenv()
 
 
 class XTwitterAPI:
-    BASE_USER_BY_SCREEN_NAME_URL = "https://x.com/i/api/graphql/vqu78dKcEkW-UAYLw5rriA/useFetchProfileSections_canViewExpandedProfileQuery"
+    BASE_USER_BY_SCREEN_NAME_URL = (
+        "https://x.com/i/api/graphql/vqu78dKcEkW-UAYLw5rriA/useFetchProfileSections_canViewExpandedProfileQuery"
+    )
     BASE_USER_TWEETS_URL = "https://x.com/i/api/graphql/Y9WM4Id6UcGFE8Z-hbnixw/UserTweets"
 
     def __init__(self) -> None:

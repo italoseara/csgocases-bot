@@ -3,7 +3,7 @@ import requests
 from datetime import datetime
 from typing import Optional, Any
 
-from tui.models import Post
+from models import Post
 from config import DEBUG, USER_AGENT
 
 
