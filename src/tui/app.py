@@ -1,66 +1,100 @@
-from textual.app import App, ComposeResult
-from textual.widgets import Footer, Static
+from rich.text import Text
+from datetime import datetime
+from textual.theme import Theme
+from textual.widgets import RichLog
 from textual.binding import Binding
-from textual.containers import Horizontal
-from textual.widgets import Label
+from textual.app import App, ComposeResult
+
+from .components import AppFooter, AppHeader, AppBody
 
 
-class AppHeader(Horizontal):
-    """Custom Header for the Application."""
-
-    def compose(self) -> ComposeResult:
-        yield Label("[b]CSGOCASES Promocode Scraper[/] [dim]v0.1.0[/]", id="app-title")
-        yield Label("[dim]Not logged in[/]", id="app-status")
-
-
-class CSGOCasesApp(App[str]):
+class CSGOCasesApp(App):
     """CSGOCases Promocode Bot TUI Application."""
 
     TITLE = "CSGOCases Bot"
-    SUB_TITLE = "1.0.0"
-
-    def get_css_variables(self) -> dict[str, str]:
-        """Override theme colors with CSGOCases branding."""
-        variables = super().get_css_variables()
-        variables.update({
-            "primary": "#1db954",
-            "secondary": "#17a34a",
-            "accent": "#22c55e",
-            "foreground": "#e4e4e7",
-            "background": "#0f1419",
-            "surface": "#1a1f26",
-            "panel": "#242b33",
-            "warning": "#f59e0b",
-            "error": "#ef4444",
-            "success": "#1db954",
-        })
-        return variables
 
     BINDINGS = [
         Binding(
-            key="f1",
-            action="help",
-            description="Help",
-            tooltip="Show help information.",
-            priority=True,
-            id="help",
-        ),
-        Binding(
-            key="ctrl+c",
+            key="ctrl+q",
             action="app.quit",
             description="Quit",
             tooltip="Quit the application.",
             priority=True,
             id="quit",
         ),
+        Binding(
+            key="ctrl+s",
+            action="force_scrape",
+            description="Scrape",
+            tooltip="Force a promocode scrape.",
+            priority=True,
+            id="force-scrape",
+        ),
     ]
 
-    CSS_PATH = "app.tcss"
+    CSS = """
+    Screen {
+        padding: 0 1;
+        background: $background;
+    }
+    """
+
+    def on_mount(self) -> None:
+        self.register_theme(
+            Theme(
+                name="csgocases",
+                primary="#1db954",
+                secondary="#17a34a",
+                accent="#22c55e",
+                foreground="#e4e4e7",
+                background="#0f1419",
+                surface="#1a1f26",
+                panel="#161b22",
+            )
+        )
+        self.theme = "csgocases"
 
     def compose(self) -> ComposeResult:
         yield AppHeader()
-        yield Static("Main content area", id="main")
-        yield Footer(show_command_palette=False, compact=True)
+        yield AppBody()
+        yield AppFooter(show_command_palette=False, compact=True)
 
-    def action_quit(self) -> None:
-        self.exit()
+    def on_ready(self) -> None:
+        """Called when the app is ready."""
+
+        self.info("Application started.")
+
+    def info(self, message: str) -> None:
+        """Log an info message to the RichLog widget."""
+        self._log("INFO", message)
+
+    def debug(self, message: str = None) -> None:
+        """Log a debug message to the RichLog widget."""
+        self._log("DEBUG", message)
+
+    def warn(self, message: str) -> None:
+        """Log a warning message to the RichLog widget."""
+        self._log("WARN", message)
+
+    def error(self, message: str) -> None:
+        """Log an error message to the RichLog widget."""
+        self._log("ERROR", message)
+
+    def success(self, message: str) -> None:
+        """Log a success message to the RichLog widget."""
+        self._log("SUCCESS", message)
+
+    def _log(self, level: str, message: str) -> None:
+        colors = {
+            "INFO": "cyan",
+            "DEBUG": "white",
+            "WARN": "bright_yellow",
+            "ERROR": "indian_red",
+            "SUCCESS": "light_green",
+        }
+
+        ts = datetime.now().strftime("%H:%M:%S")
+        color = colors.get(level.upper(), "white")
+
+        log = self.query_one(RichLog)
+        log.write(f"[{ts}] [bold {color}]{level:<8}[/] - {message}")
