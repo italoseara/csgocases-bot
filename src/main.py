@@ -1,6 +1,6 @@
 from config import DISCORD_GUILD_ID, DISCORD_CHANNEL_ID
 from utils.ocr import read_promocode_from_image_url
-from integrations import InstagramAPI, XTwitterAPI, DiscordAPI, FacebookAPI, CSGOCasesAPI
+from tui.integrations import InstagramAPI, XTwitterAPI, DiscordAPI, FacebookAPI, CSGOCasesAPI
 
 
 def main() -> None:
