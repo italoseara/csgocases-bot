@@ -1,16 +1,11 @@
-import os
 import json
 import requests
 import base64
 from typing import Optional
 from datetime import datetime
-from dotenv import load_dotenv
 
 from models import Post
 from config import DEBUG, BEARER_TOKEN, USER_AGENT
-
-
-load_dotenv()
 
 
 class XTwitterAPI:
@@ -19,9 +14,9 @@ class XTwitterAPI:
     )
     BASE_USER_TWEETS_URL = "https://x.com/i/api/graphql/Y9WM4Id6UcGFE8Z-hbnixw/UserTweets"
 
-    def __init__(self) -> None:
-        self.auth_token = os.getenv("X_AUTH_TOKEN")
-        self.csrf_token = os.getenv("X_CSRF_TOKEN")
+    def __init__(self, auth_token: str, csrf_token: str) -> None:
+        self.auth_token = auth_token
+        self.csrf_token = csrf_token
 
     def fetch_user_id(self, username: str) -> str:
         """Fetch user ID by username."""

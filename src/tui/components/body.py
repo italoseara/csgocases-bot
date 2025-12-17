@@ -29,6 +29,10 @@ class AppBody(Vertical):
         height: 1fr;
     }
 
+    #scrape_interval {
+        margin-left: 1;
+    }
+
     #db-area {
         height: auto;
     }
@@ -130,14 +134,15 @@ class AppBody(Vertical):
                         )
 
                         yield Static()
-                        yield Label("Scrape Interval (minutes):")
-                        yield Input(
-                            placeholder="e.g., 15",
-                            compact=True,
-                            id="scrape_interval",
-                            value=str(settings.scrape_interval),
-                            type="integer",
-                        )
+                        with Horizontal():
+                            yield Label("Scrape Interval (minutes):")
+                            yield Input(
+                                placeholder="e.g., 15",
+                                compact=True,
+                                id="scrape_interval",
+                                value=str(settings.scrape_interval),
+                                type="integer",
+                            )
 
             with TabPane("Help", id="help-tab"):
                 yield Static("Help content area")
@@ -151,8 +156,8 @@ class AppBody(Vertical):
             try:
                 value = int(event.value)
             except ValueError:
-                value = settings.scrape_interval
-            settings.scrape_interval = value
+                value = settings.__dict__[event.input.id]
+            settings.__dict__[event.input.id] = value
         else:
             settings.__dict__[event.input.id] = event.value
         settings.save()

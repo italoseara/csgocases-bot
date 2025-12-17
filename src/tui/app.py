@@ -4,6 +4,7 @@ from textual.widgets import RichLog
 from textual.binding import Binding
 from textual.app import App, ComposeResult
 
+from integrations import CSGOCasesAPI
 from .components import AppFooter, AppHeader, AppBody
 from .settings import Settings
 
@@ -47,9 +48,11 @@ class CSGOCasesApp(App):
     }
     """
 
+    scraping = False
     settings = Settings.load()
-    scraping: bool = False
-    next_scrape: datetime = datetime.now() + timedelta(minutes=settings.scrape_interval)
+    next_scrape = datetime.now() + timedelta(minutes=settings.scrape_interval)
+
+    bot = CSGOCasesAPI()
 
     def on_mount(self) -> None:
         self.register_theme(
@@ -76,11 +79,17 @@ class CSGOCasesApp(App):
 
         self.info("Application started.")
 
+    def on_shutdown(self) -> None:
+        """Called when the app is shutting down."""
+
+        self.info("Shutting down application...")
+        self.bot.quit()
+
     def info(self, message: str) -> None:
         """Log an info message to the RichLog widget."""
         self._log("INFO", message)
 
-    def debug(self, message: str = None) -> None:
+    def debug(self, message: str) -> None:
         """Log a debug message to the RichLog widget."""
         self._log("DEBUG", message)
 

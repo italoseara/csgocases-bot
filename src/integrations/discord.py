@@ -11,8 +11,8 @@ from config import DEBUG, USER_AGENT
 class DiscordAPI:
     BASE_MESSAGES_URL = "https://discord.com/api/v10/channels/{channel_id}/messages"
 
-    def __init__(self) -> None:
-        self.auth_token = os.getenv("DISCORD_AUTH_TOKEN")
+    def __init__(self, auth_token: str) -> None:
+        self.auth_token = auth_token
 
     def fetch_latest_post(self, guild_id: str, channel_id: str) -> Optional[Post]:
         """Fetch the latest post from a Discord channel."""

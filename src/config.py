@@ -3,7 +3,7 @@
 # ============================
 
 # Enable debug mode
-DEBUG = True
+DEBUG = False
 
 # Main website URL and social media usernames
 X_USERNAME = "csgocasescom"
