@@ -20,4 +20,4 @@ class AppFooter(Footer):
 
     def compose(self) -> ComposeResult:
         yield from super().compose()
-        yield Countdown(5)
+        yield Countdown()

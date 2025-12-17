@@ -1,5 +1,5 @@
-from textual.containers import Vertical, Horizontal, VerticalScroll
-from textual.widgets import RichLog, TabbedContent, TabPane, Static, Label, Input, Checkbox, Button
+from textual.containers import Vertical, Horizontal
+from textual.widgets import RichLog, TabbedContent, TabPane, Static, Label, Input, Checkbox
 from textual.app import ComposeResult
 
 from textual.containers import Vertical
@@ -94,7 +94,7 @@ class AppBody(Vertical):
                         yield Checkbox(
                             label="Enable Auto-Redeem", value=settings.enable_auto_redeem, compact=True, id="enable_auto_redeem"
                         )
-                        
+
                         yield Static()
                         yield Checkbox(
                             label="Enable Discord Scraper",
@@ -120,13 +120,23 @@ class AppBody(Vertical):
                             compact=True,
                             id="enable_facebook_scraper",
                         )
-                        
+
                         yield Static()
                         yield Checkbox(
                             label="Send Notifications to Discord",
                             value=settings.send_notifications,
                             compact=True,
                             id="send_notifications",
+                        )
+
+                        yield Static()
+                        yield Label("Scrape Interval (minutes):")
+                        yield Input(
+                            placeholder="e.g., 15",
+                            compact=True,
+                            id="scrape_interval",
+                            value=str(settings.scrape_interval),
+                            type="integer",
                         )
 
             with TabPane("Help", id="help-tab"):
@@ -136,7 +146,15 @@ class AppBody(Vertical):
         """Handle input changes."""
 
         settings = self.app.settings
-        settings.__dict__[event.input.id] = event.value
+
+        if event.input.type == "integer":
+            try:
+                value = int(event.value)
+            except ValueError:
+                value = settings.scrape_interval
+            settings.scrape_interval = value
+        else:
+            settings.__dict__[event.input.id] = event.value
         settings.save()
 
     def on_checkbox_changed(self, event: Checkbox.Changed) -> None:

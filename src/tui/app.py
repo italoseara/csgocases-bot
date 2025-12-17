@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from textual.theme import Theme
 from textual.widgets import RichLog
 from textual.binding import Binding
@@ -25,10 +25,18 @@ class CSGOCasesApp(App):
         Binding(
             key="ctrl+s",
             action="force_scrape",
-            description="Scrape",
+            description="Force Scrape",
             tooltip="Force a promocode scrape.",
             priority=True,
             id="force-scrape",
+        ),
+        Binding(
+            key="ctrl+r",
+            action="restart_countdown",
+            description="Restart Countdown",
+            tooltip="Restart the scrape countdown timer.",
+            priority=True,
+            id="restart-countdown",
         ),
     ]
 
@@ -40,6 +48,8 @@ class CSGOCasesApp(App):
     """
 
     settings = Settings.load()
+    scraping: bool = False
+    next_scrape: datetime = datetime.now() + timedelta(minutes=settings.scrape_interval)
 
     def on_mount(self) -> None:
         self.register_theme(

@@ -12,6 +12,7 @@ class Settings:
     x_csrf_token: str = ""
     discord_auth_token: str = ""
     enable_auto_redeem: bool = True
+    scrape_interval: int = 30
     enable_discord_scraper: bool = True
     enable_instagram_scraper: bool = True
     enable_x_scraper: bool = True

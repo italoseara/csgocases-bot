@@ -1,3 +1,4 @@
+from datetime import datetime
 from textual.widgets import Static
 
 
@@ -12,17 +13,19 @@ class Countdown(Static):
     }
     """
 
-    def __init__(self, total_seconds: int, *args, **kwargs) -> None:
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
-        self.total_seconds = total_seconds
-        self.remaining_seconds = total_seconds
+        self.remaining_seconds = 0
         self.running = True
         self.update_label()
 
     def update_label(self) -> None:
-        if self.remaining_seconds <= 0:
+        if self.app.scraping:
             self.update("[b]Scraping...[/]")
             return
+
+        self.remaining_seconds = int((self.app.next_scrape - datetime.now()).total_seconds())
+        self.remaining_seconds = max(0, self.remaining_seconds)
 
         minutes, seconds = divmod(self.remaining_seconds, 60)
         self.update(f"[b]Next Scrape In:[/] {minutes:02}:{seconds:02}")
