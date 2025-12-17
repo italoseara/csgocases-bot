@@ -1,4 +1,3 @@
-from rich.text import Text
 from datetime import datetime
 from textual.theme import Theme
 from textual.widgets import RichLog
@@ -6,6 +5,7 @@ from textual.binding import Binding
 from textual.app import App, ComposeResult
 
 from .components import AppFooter, AppHeader, AppBody
+from .settings import Settings
 
 
 class CSGOCasesApp(App):
@@ -38,6 +38,8 @@ class CSGOCasesApp(App):
         background: $background;
     }
     """
+
+    settings = Settings.load()
 
     def on_mount(self) -> None:
         self.register_theme(
