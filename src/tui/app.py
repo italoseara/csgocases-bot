@@ -1,12 +1,19 @@
+import asyncio
 from datetime import datetime, timedelta
+from unittest import result
 from textual.theme import Theme
 from textual.widgets import RichLog
 from textual.binding import Binding
 from textual.app import App, ComposeResult
 
-from integrations import CSGOCasesAPI
+from models.post import Post
+from utils.ocr import read_promocode_from_image_url
+from repositories.promocode import PromocodeRepository
+from integrations import CSGOCasesAPI, FacebookAPI, XTwitterAPI, DiscordAPI, InstagramAPI
 from .components import AppFooter, AppHeader, AppBody
 from .settings import Settings
+
+from config import X_USERNAME, DISCORD_CHANNEL_ID, DISCORD_GUILD_ID, INSTAGRAM_USERNAME, FACEBOOK_USERNAME
 
 
 class CSGOCasesApp(App):
@@ -53,6 +60,7 @@ class CSGOCasesApp(App):
     next_scrape = datetime.now() + timedelta(minutes=settings.scrape_interval)
 
     bot = CSGOCasesAPI()
+    promocode_repo = PromocodeRepository(settings.database_url)
 
     def on_mount(self) -> None:
         self.register_theme(
@@ -85,27 +93,120 @@ class CSGOCasesApp(App):
         self.info("Shutting down application...")
         self.bot.quit()
 
+    def action_restart_countdown(self) -> None:
+        """Restart the scrape countdown timer."""
+
+        self.next_scrape = datetime.now() + timedelta(minutes=self.settings.scrape_interval)
+        self.info("Scrape countdown timer restarted.")
+
+    def action_force_scrape(self) -> None:
+        """Force a promocode scrape."""
+
+        if self.scraping:
+            self.warn("A scrape is already in progress. Please wait...")
+            return
+
+        self.info("Forcing promocode scrape...")
+
+        try:
+            asyncio.create_task(asyncio.to_thread(self.scrape))
+        finally:
+            self.next_scrape = datetime.now() + timedelta(minutes=self.settings.scrape_interval)
+
+    def scrape(self) -> None:
+        """Perform a promocode scrape."""
+
+        self.scraping = True
+        self.info("Starting promocode scrape...")
+
+        posts: list[Post] = []
+
+        self.info("Scraping X (Twitter)...")
+        posts.append(
+            XTwitterAPI(
+                auth_token=self.settings.x_auth_token,
+                csrf_token=self.settings.x_csrf_token,
+            ).fetch_latest_post(X_USERNAME)
+        )
+
+        self.info("Scraping Discord...")
+        posts.append(
+            DiscordAPI(
+                auth_token=self.settings.discord_auth_token,
+            ).fetch_latest_post(DISCORD_GUILD_ID, DISCORD_CHANNEL_ID)
+        )
+
+        self.info("Scraping Facebook...")
+        posts.append(FacebookAPI().fetch_latest_post(FACEBOOK_USERNAME))
+
+        self.info("Scraping Instagram...")
+        posts.append(InstagramAPI().fetch_latest_post(INSTAGRAM_USERNAME))
+
+        self.info("Analyzing posts...")
+        for post in posts:
+            if post is None:
+                continue
+
+            self.debug(f"Analyzing post from {post.platform}...")
+            if not post.media_url:
+                self.warn(f"No media found in post from {post.platform}. Skipping...")
+                continue
+
+            # Check if there is the word "promocode" in the post text
+            if post.text and "promocode" not in post.text.lower():
+                self.warn(f"No promocode mentioned in post from {post.platform}. Skipping...")
+                continue
+
+            # Check if promocode already exists
+            if self.promocode_repo.exists_by_post_url(post.url):
+                self.info(f"Promocode from post on {post.platform} already claimed. Skipping...")
+                continue
+
+            promocode = read_promocode_from_image_url(post.media_url)
+            if not promocode:
+                self.warn(f"No promocode found in post from {post.platform}.")
+                continue
+
+            if self.settings.enable_auto_redeem:
+                if not self.bot._is_logged_in:
+                    self.error("Bot is not logged in. Cannot claim promocode.")
+                    continue
+
+                self.info(f"Promocode '{promocode}' found in post from {post.platform}. Claiming...")
+                try:
+                    result = self.bot.claim_promocode(promocode)
+                    if result.get("status") == "success":
+                        self.success(f"Promocode '{promocode}' claimed successfully: {result.get('message')}")
+                    else:
+                        self.error(f"Failed to claim promocode '{promocode}': {result.get('message')}")
+                    self.promocode_repo.create(code=promocode, post_url=post.url)
+
+                except Exception as e:
+                    self.error(f"Failed to claim promocode '{promocode}': {e}")
+        self.info("Promocode scrape completed.")
+        self.scraping = False
+
     def info(self, message: str) -> None:
         """Log an info message to the RichLog widget."""
-        self._log("INFO", message)
+        self.__log("INFO", message)
 
     def debug(self, message: str) -> None:
         """Log a debug message to the RichLog widget."""
-        self._log("DEBUG", message)
+        self.__log("DEBUG", message)
 
     def warn(self, message: str) -> None:
         """Log a warning message to the RichLog widget."""
-        self._log("WARN", message)
+        self.__log("WARN", message)
 
     def error(self, message: str) -> None:
         """Log an error message to the RichLog widget."""
-        self._log("ERROR", message)
+        self.__log("ERROR", message)
 
     def success(self, message: str) -> None:
         """Log a success message to the RichLog widget."""
-        self._log("SUCCESS", message)
+        self.__log("SUCCESS", message)
 
-    def _log(self, level: str, message: str) -> None:
+    def __log(self, level: str, message: str) -> None:
         colors = {
             "INFO": "cyan",
             "DEBUG": "white",

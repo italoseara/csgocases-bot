@@ -97,7 +97,7 @@ class CSGOCasesAPI:
             wallet_funds = wait.until(EC.element_to_be_clickable((By.ID, "walletFunds")))
             wallet_funds.click()
 
-            promocode_tab = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.tabs > a:nth-child(7)")))
+            promocode_tab = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.tabs > a:nth-child(6)")))
             promocode_tab.click()
 
             promocode_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.promocode input")))

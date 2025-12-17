@@ -40,6 +40,22 @@ class AppHeader(Horizontal):
         login_btn.can_focus = False
         yield login_btn
 
+    def on_mount(self) -> None:
+        """Called when the widget is mounted."""
+
+        def _check_login() -> None:
+            try:
+                logged_in = self.app.bot.is_logged_in()
+
+                if logged_in:
+                    btn = self.query_one("#login-btn", Button)
+                    btn.label = f"[white]Logged in as: [#1db954]{self.app.bot.username}[/]"
+                    btn.refresh()
+            except Exception as exc:
+                self.app.error(f"Login check failed: {exc}")
+
+        asyncio.create_task(asyncio.to_thread(_check_login))
+
     async def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id != "login-btn":
             return
@@ -52,12 +68,16 @@ class AppHeader(Horizontal):
         try:
             logged_in = await asyncio.to_thread(self.app.bot.is_logged_in)
 
+            attempts = 0
             while not logged_in:
                 await asyncio.to_thread(self.app.bot.login)
                 logged_in = await asyncio.to_thread(self.app.bot.is_logged_in)
+                attempts += 1
+
+                if attempts >= 3:
+                    raise Exception("Maximum login attempts exceeded.")
 
             btn.label = f"[white]Logged in as: [#1db954]{self.app.bot.username}[/]"
-            btn.disabled = True
 
         except Exception as exc:
             btn.label = "[red]Login Failed[/]"

@@ -160,6 +160,10 @@ class AppBody(Vertical):
             settings.__dict__[event.input.id] = value
         else:
             settings.__dict__[event.input.id] = event.value
+
+        if event.input.id == "database_url":
+            self.app.promocode_repo.url = event.value
+            
         settings.save()
 
     def on_checkbox_changed(self, event: Checkbox.Changed) -> None:
