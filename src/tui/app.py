@@ -183,6 +183,7 @@ class CSGOCasesApp(App):
 
                 except Exception as e:
                     self.error(f"Failed to claim promocode '{promocode}': {e}")
+
         self.info("Promocode scrape completed.")
         self.scraping = False
 
