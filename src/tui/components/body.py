@@ -1,6 +1,6 @@
-from textual.containers import Vertical, Horizontal
-from textual.widgets import RichLog, TabbedContent, TabPane, Static, Label, Input, Checkbox
 from textual.app import ComposeResult
+from textual.containers import Vertical, Horizontal
+from textual.widgets import RichLog, TabbedContent, TabPane, Static, Label, Input, Checkbox, MarkdownViewer
 
 from textual.containers import Vertical
 
@@ -21,6 +21,10 @@ class AppBody(Vertical):
                 background-tint: transparent;
             }
         }
+    }
+
+    #help-viewer {
+        scrollbar-size: 0 1;
     }
 
     .container {
@@ -155,7 +159,38 @@ class AppBody(Vertical):
                             )
 
             with TabPane("Help", id="help-tab"):
-                yield Static("Help content area")
+                help_text = """
+                # CSGOCases Bot Help
+                This application helps you automate the process of scraping and redeeming promocodes from various social media platforms for CSGOCases.
+
+                ## Disclaimer
+                Using bots to interact with websites may violate their terms of service. Use at your own risk, the author is not responsible for any misuse or damages caused by this software.
+
+                ## Configuration
+                - **Database URL**: The connection string for your database.
+                - **Authentication Tokens**: Required tokens for accessing social media APIs.
+                - **Bot Settings**: Options to enable/disable auto-redeeming and scrapers for different platforms.
+                - **Scrape Interval**: How often the bot should check for new promocodes
+
+                To find the `X Auth Token` and `X CSRF Token` for X (formerly Twitter), you can use your browser's developer tools while logged into your account. Look for `auth_token` and `ct0` cookies respectively in the storage section.
+
+                To find the `Discord Auth Token`, you can use your browser's developer tools while logged into your Discord account. Look for `Authorization` header in the network requests.
+
+                ## Usage
+                1. Configure your settings in the 'Settings' tab.
+                2. Monitor logs in the 'Logs' tab to see the bot's activity.
+                3. Ensure your database is set up to store promocodes.
+
+                ## Support
+                For further assistance, please create an issue on the [GitHub repository](https://github.com/italoseara/csgocases-bot)
+
+                ## Author
+                This bot is developed and maintained by [Italo Seara](https://github.com/italoseara).
+                """.replace(
+                    " " * 16, ""
+                )
+
+                yield MarkdownViewer(help_text, show_table_of_contents=False, id="help-viewer")
 
     def on_input_changed(self, event: Input.Changed) -> None:
         """Handle input changes."""
