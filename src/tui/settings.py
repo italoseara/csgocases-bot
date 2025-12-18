@@ -11,6 +11,7 @@ class Settings:
     x_auth_token: str = ""
     x_csrf_token: str = ""
     discord_auth_token: str = ""
+    discord_webhook_url: str = ""
     enable_auto_redeem: bool = True
     scrape_interval: int = 30
     enable_discord_scraper: bool = True

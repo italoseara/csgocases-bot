@@ -134,6 +134,16 @@ class AppBody(Vertical):
                         )
 
                         yield Static()
+                        yield Label("Discord Webhook URL:")
+                        yield Input(
+                            placeholder="Enter your Webhook URL here",
+                            password=True,
+                            compact=True,
+                            id="discord_webhook_url",
+                            value=settings.discord_webhook_url,
+                        )
+
+                        yield Static()
                         with Horizontal():
                             yield Label("Scrape Interval (minutes):")
                             yield Input(
@@ -163,7 +173,7 @@ class AppBody(Vertical):
 
         if event.input.id == "database_url":
             self.app.promocode_repo.url = event.value
-            
+
         settings.save()
 
     def on_checkbox_changed(self, event: Checkbox.Changed) -> None:

@@ -1,10 +1,10 @@
 import asyncio
-from datetime import datetime, timedelta
-from unittest import result
 from textual.theme import Theme
 from textual.widgets import RichLog
 from textual.binding import Binding
+from datetime import datetime, timedelta
 from textual.app import App, ComposeResult
+from discord_webhook import DiscordWebhook, DiscordEmbed
 
 from models.post import Post
 from utils.ocr import read_promocode_from_image_url
@@ -154,7 +154,7 @@ class CSGOCasesApp(App):
 
             # Check if there is the word "promocode" in the post text
             if post.text and "promocode" not in post.text.lower():
-                self.warn(f"No promocode mentioned in post from {post.platform}. Skipping...")
+                self.info(f"No promocode mentioned in post from {post.platform}. Skipping...")
                 continue
 
             # Check if promocode already exists
@@ -167,6 +167,7 @@ class CSGOCasesApp(App):
                 self.warn(f"No promocode found in post from {post.platform}.")
                 continue
 
+            # Redeem promocode if auto-redeem is enabled
             if self.settings.enable_auto_redeem:
                 if not self.bot._is_logged_in:
                     self.error("Bot is not logged in. Cannot claim promocode.")
@@ -183,6 +184,41 @@ class CSGOCasesApp(App):
 
                 except Exception as e:
                     self.error(f"Failed to claim promocode '{promocode}': {e}")
+
+            # Notify via Discord if enabled
+            if self.settings.send_notifications:
+                webhook_url = self.settings.discord_webhook_url
+                if not webhook_url:
+                    self.warn("Discord webhook URL is not set. Cannot send notification.")
+                    continue
+
+                self.info(f"Sending notification for promocode '{promocode}'...")
+                try:
+                    webhook = DiscordWebhook(url=webhook_url, content="@everyone")
+
+                    embed = DiscordEmbed(
+                        title=f"New promocode `{promocode}`",
+                        description=f"Click [here]({post.url}) to see the post",
+                        color="6dc176",
+                    )
+                    embed.set_author(
+                        name="csgocases.com", icon_url="https://csgocases.com/images/avatar.jpg", url=post.author_url
+                    )
+                    embed.set_image(url=post.media_url)
+                    embed.set_timestamp()
+
+                    webhook.add_embed(embed)
+
+                    response = webhook.execute()
+                    if response.ok:
+                        self.success(f"Notification for promocode '{promocode}' sent successfully.")
+                    else:
+                        self.error(
+                            f"Failed to send notification for promocode '{promocode}': {response.status_code} {response.reason}"
+                        )
+
+                except Exception as e:
+                    self.error(f"Failed to send notification for promocode '{promocode}': {e}")
 
         self.info("Promocode scrape completed.")
         self.scraping = False

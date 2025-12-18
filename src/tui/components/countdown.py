@@ -1,4 +1,5 @@
-from datetime import datetime
+import asyncio
+from datetime import datetime, timedelta
 from textual.widgets import Static
 
 
@@ -24,9 +25,6 @@ class Countdown(Static):
             self.update("[b]Scraping...[/]")
             return
 
-        self.remaining_seconds = int((self.app.next_scrape - datetime.now()).total_seconds())
-        self.remaining_seconds = max(0, self.remaining_seconds)
-
         minutes, seconds = divmod(self.remaining_seconds, 60)
         self.update(f"[b]Next Scrape In:[/] {minutes:02}:{seconds:02}")
 
@@ -34,8 +32,11 @@ class Countdown(Static):
         self.set_interval(1, self.tick)
 
     def tick(self) -> None:
-        if self.running and self.remaining_seconds > 0:
-            self.remaining_seconds -= 1
-            self.update_label()
-        elif self.remaining_seconds == 0:
-            self.running = False
+        self.remaining_seconds = int((self.app.next_scrape - datetime.now()).total_seconds())
+        self.remaining_seconds = max(0, self.remaining_seconds)
+        self.update_label()
+
+        if self.remaining_seconds == 0:
+            if not self.app.scraping:
+                asyncio.create_task(asyncio.to_thread(self.app.scrape))
+                self.app.next_scrape = datetime.now() + timedelta(minutes=self.app.settings.scrape_interval)
