@@ -167,6 +167,11 @@ class CSGOCasesApp(App):
                 self.warn(f"No promocode found in post from {post.platform}.")
                 continue
 
+            # Check if promocode already exists by code
+            if self.promocode_repo.exists_by_code(promocode):
+                self.info(f"Promocode '{promocode}' from post on {post.platform} already claimed. Skipping...")
+                continue
+
             # Redeem promocode if auto-redeem is enabled
             if self.settings.enable_auto_redeem:
                 if not self.bot._is_logged_in:
