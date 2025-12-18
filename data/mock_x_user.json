@@ -1,0 +1,8 @@
+{
+  "data": {
+    "user_result_by_screen_name": {
+      "result": { "__typename": "User", "can_view_expanded_profile": false, "id": "VXNlcjo5NDM0NTI2ODY4MjA3NjE2MDA=" },
+      "id": "VXNlclJlc3VsdHM6OTQzNDUyNjg2ODIwNzYxNjAw"
+    }
+  }
+}

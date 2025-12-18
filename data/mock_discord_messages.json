@@ -1,0 +1,373 @@
+[
+  {
+    "type": 0,
+    "content": "Hello @everyone, \nFirst 3333 users who use this promocode will get free $ \ud83c\udf81",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [
+      {
+        "id": "1449104307088658575",
+        "filename": "dis18ca.png",
+        "size": 553244,
+        "url": "https://media.discordapp.net/attachments/1279122419994595361/1450927066194120926/disco31b2.png?ex=694450a1&is=6942ff21&hm=a56bd58010ad37733f587a40ed39726e4e3ae53114f8d3427d3ba764ea81274f&=&format=webp&quality=lossless&width=1006&height=1006",
+        "proxy_url": "https://media.discordapp.net/attachments/1279122419994595361/1449104307088658575/dis18ca.png?ex=6940520d&is=693f008d&hm=3a0c83f8c23c37eb013a821760d140362faa28c2e997979dc6091dbdf07b085d&",
+        "width": 1080,
+        "height": 1080,
+        "content_type": "image/png",
+        "original_content_type": "image/png",
+        "content_scan_version": 3,
+        "placeholder": "CrgFBwRk6WaDaXRPimcuSeXFragACloB",
+        "placeholder_version": 1
+      }
+    ],
+    "embeds": [],
+    "timestamp": "2025-12-12T18:23:10.036000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1450927066584322345",
+    "channel_id": "1279122419994595361",
+    "author": {
+      "id": "523238966934110219",
+      "username": "selernik.",
+      "avatar": "99a440e1e18bd25d6ba9327ad698806c",
+      "discriminator": "0",
+      "public_flags": 0,
+      "flags": 0,
+      "banner": null,
+      "accent_color": null,
+      "global_name": "CsgoCases.com",
+      "avatar_decoration_data": null,
+      "collectibles": null,
+      "display_name_styles": null,
+      "banner_color": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": true,
+    "tts": false,
+    "reactions": [
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\udf83"
+        },
+        "count": 62,
+        "count_details": {
+          "burst": 0,
+          "normal": 62
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83d\udcb0"
+        },
+        "count": 59,
+        "count_details": {
+          "burst": 0,
+          "normal": 59
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\udde7\ud83c\uddf7"
+        },
+        "count": 83,
+        "count_details": {
+          "burst": 0,
+          "normal": 83
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\uddf5\ud83c\uddf1"
+        },
+        "count": 43,
+        "count_details": {
+          "burst": 0,
+          "normal": 43
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\uddf8\ud83c\uddea"
+        },
+        "count": 14,
+        "count_details": {
+          "burst": 0,
+          "normal": 14
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\udde8\ud83c\uddff"
+        },
+        "count": 44,
+        "count_details": {
+          "burst": 0,
+          "normal": 44
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\udf7b"
+        },
+        "count": 24,
+        "count_details": {
+          "burst": 0,
+          "normal": 24
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\uddf9\ud83c\uddf7"
+        },
+        "count": 31,
+        "count_details": {
+          "burst": 0,
+          "normal": 31
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83e\udd0c"
+        },
+        "count": 22,
+        "count_details": {
+          "burst": 0,
+          "normal": 22
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\udded\ud83c\uddf7"
+        },
+        "count": 12,
+        "count_details": {
+          "burst": 0,
+          "normal": 12
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\udf64"
+        },
+        "count": 12,
+        "count_details": {
+          "burst": 0,
+          "normal": 12
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\uddf9"
+        },
+        "count": 14,
+        "count_details": {
+          "burst": 0,
+          "normal": 14
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83d\udc7a"
+        },
+        "count": 15,
+        "count_details": {
+          "burst": 0,
+          "normal": 15
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83d\ude4c"
+        },
+        "count": 13,
+        "count_details": {
+          "burst": 0,
+          "normal": 13
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\uddfa\ud83c\udde6"
+        },
+        "count": 17,
+        "count_details": {
+          "burst": 0,
+          "normal": 17
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": "1402002720243716097",
+          "name": "Foking_Laugh"
+        },
+        "count": 14,
+        "count_details": {
+          "burst": 0,
+          "normal": 14
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\udde6\ud83c\uddf7"
+        },
+        "count": 22,
+        "count_details": {
+          "burst": 0,
+          "normal": 22
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83d\udc4d"
+        },
+        "count": 26,
+        "count_details": {
+          "burst": 0,
+          "normal": 26
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": "1360264642059960473",
+          "name": "mangomanface"
+        },
+        "count": 14,
+        "count_details": {
+          "burst": 0,
+          "normal": 14
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      },
+      {
+        "emoji": {
+          "id": null,
+          "name": "\ud83c\udde7\ud83c\udde9"
+        },
+        "count": 12,
+        "count_details": {
+          "burst": 0,
+          "normal": 12
+        },
+        "burst_colors": [],
+        "me_burst": false,
+        "burst_me": false,
+        "me": false,
+        "burst_count": 0
+      }
+    ]
+  }
+]

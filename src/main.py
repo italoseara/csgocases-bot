@@ -1,9 +1,8 @@
-from ui.app import App
-from bot import Bot
+from tui.app import CSGOCasesApp
 
 
 def main() -> None:
-    app = App()
+    app = CSGOCasesApp()
     app.run()
 
 

@@ -1,0 +1,8 @@
+{
+  "material-icon-theme.folders.associations": {
+    "tui": "ui"
+  },
+  "material-icon-theme.files.associations": {
+    "*.tcss": "css",
+  }
+}

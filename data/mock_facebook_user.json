@@ -1,0 +1,935 @@
+{
+  "id": "100063488716198",
+  "timeline_list_feed_units": {
+    "edges": [
+      {
+        "node": {
+          "__typename": "Story",
+          "__isFeedUnit": "Story",
+          "debug_info": null,
+          "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg=",
+          "sponsored_data": null,
+          "feedback": {
+            "associated_group": null,
+            "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA==",
+            "owning_profile": {
+              "__typename": "User",
+              "name": "csgocases.com",
+              "short_name": "csgocases.com",
+              "id": "100063488716198"
+            }
+          },
+          "is_story_civic": null,
+          "attachments": [
+            {
+              "media": {
+                "__typename": "Photo",
+                "__isNode": "Photo",
+                "id": "1414545810671696"
+              },
+              "styles": {
+                "__typename": "StoryAttachmentPhotoStyleRenderer",
+                "__isStoryAttachmentStyleRendererUnion": "StoryAttachmentPhotoStyleRenderer",
+                "is_prod_eligible": true,
+                "attachment": {
+                  "media": {
+                    "__typename": "Photo",
+                    "__isMedia": "Photo",
+                    "accent_color": "FF051012",
+                    "viewer_image": {
+                      "height": 720,
+                      "width": 1280
+                    },
+                    "photo_product_tags": [],
+                    "focus": {
+                      "x": 0.5,
+                      "y": 0.33
+                    },
+                    "photo_image": {
+                      "uri": "https://scontent.fssa7-1.fna.fbcdn.net/v/t39.30808-6/595905569_1414545814005029_6170933189478112281_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DoO5SXqck9AQ7kNvwE8Kxvx&_nc_oc=Admk8Sd8dmAI_5poxoL9np2-xbB88B0V5pwOlDpQLIIQEjL_6YBXN0N2krvuZ9-DIVXWahj7tZw5yqKgCTFLy_Fo&_nc_zt=23&_nc_ht=scontent.fssa7-1.fna&_nc_gid=irFXuxI2-qVCIXT8M8506A&oh=00_AfnyJvSAxww74Lz_lC2-wXN8NfQv9orqarKqnI6CmO6_7w&oe=6946157F",
+                      "height": 540,
+                      "width": 960
+                    },
+                    "accessibility_caption": "Pode ser uma imagem de texto que diz \"CSGOCASES ЛAAKa 3423423 रग 2 GIVEAWAY AK-47|FR AK-47| FRONTSIDE 48H MISTY to ENTER: 7.62 1. 2. 3. Like WriteyourSteamID4 Write your SteamlD64 Share\"",
+                    "url": "https://www.facebook.com/photo/?fbid=1414545810671696&set=a.510687047724248",
+                    "id": "1414545810671696",
+                    "feedback": {
+                      "can_viewer_comment": false,
+                      "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA=="
+                    },
+                    "__isNode": "Photo",
+                    "comet_product_tag_feed_overlay_renderer": null,
+                    "comet_product_tag_dot_hint_renderer": null,
+                    "creation_story": {
+                      "target_group": null,
+                      "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+                    }
+                  }
+                },
+                "__module_operation_CometFeedStoryAttachmentMatchRenderer_attachment": {
+                  "__dr": "CometFeedStoryPhotoAttachmentStyle_styleTypeRenderer$normalization.graphql"
+                },
+                "__module_component_CometFeedStoryAttachmentMatchRenderer_attachment": {
+                  "__dr": "CometFeedStoryPhotoAttachmentStyle.react"
+                }
+              }
+            }
+          ],
+          "cache_id": "2462960471343443349",
+          "matched_terms": [],
+          "post_id": "1414545857338358",
+          "cix_screen": null,
+          "future_of_feed_info": {
+            "should_reverse_message_and_attachment_position": false,
+            "should_overlay_header": false,
+            "aspect_ratio_update": -1,
+            "web_reshare_variant": "NORMAL"
+          },
+          "attached_story": null,
+          "bumpers": null,
+          "comet_sections": {
+            "__typename": "CometStorySections",
+            "content": {
+              "__typename": "CometFeedStoryDefaultContentStrategy",
+              "__isICometStorySection": "CometFeedStoryDefaultContentStrategy",
+              "is_prod_eligible": true,
+              "story": {
+                "feedback": {
+                  "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA=="
+                },
+                "comet_sections": {
+                  "above_message": null,
+                  "info_icon": null,
+                  "attachment_overlay": null,
+                  "attached_story": null,
+                  "message": {
+                    "__typename": "CometFeedStoryDefaultMessageRenderingStrategy",
+                    "__isICometStorySection": "CometFeedStoryDefaultMessageRenderingStrategy",
+                    "is_prod_eligible": true,
+                    "story": {
+                      "is_text_only_story": false,
+                      "message": {
+                        "delight_ranges": [],
+                        "image_ranges": [],
+                        "inline_style_ranges": [],
+                        "aggregated_ranges": [],
+                        "ranges": [
+                          {
+                            "entity": {
+                              "__typename": "User",
+                              "__isEntity": "User",
+                              "__isActor": "User",
+                              "id": "pfbid0iXYiNbPHNut7mhsNZSZ65mxi8x3nBQQD2KSZrybj8YS8ZTvQiZX7AFeCeLd5Nz22l",
+                              "url": null,
+                              "profile_url": null,
+                              "short_name": "Kittanan",
+                              "work_info": null,
+                              "__module_operation_CometTextWithEntitiesRelay_textWithEntities": {
+                                "__dr": "ProfileGeminiWeakReferenceLink_user$normalization.graphql"
+                              },
+                              "__module_component_CometTextWithEntitiesRelay_textWithEntities": {
+                                "__dr": "ProfileGeminiWeakReferenceLink.react"
+                              },
+                              "work_foreign_entity_info": null,
+                              "is_verified": false,
+                              "mobileUrl": null,
+                              "__isNode": "User"
+                            },
+                            "entity_is_weak_reference": false,
+                            "length": 39,
+                            "offset": 185
+                          },
+                          {
+                            "entity": {
+                              "__typename": "ExternalUrl",
+                              "__isEntity": "ExternalUrl",
+                              "url": "https://l.facebook.com/l.php?u=https%3A%2F%2Fcsgocases.com%2Fprofile%2F1971270&h=AT3nb-9FEtVh2-Phc2ZYWI3BapFZXmUPuGzXG4LFCAl2Pqm7gErrCLPmgilbe3ivlx8oHX9YlwPxyOV5HWdxKTnxqjoow_SETHDndjeX9OXPh-k2NvjEdGQjgx1-YwAhk_UPHR2OGIUv3KgLlJLg_qgS1hgBd0wc8KA21YWQw9eA8q1Y&s=1",
+                              "external_url": "https://csgocases.com/profile/1971270",
+                              "__isWebLinkable": "ExternalUrl",
+                              "web_link": {
+                                "__typename": "ExternalWebLink",
+                                "url": "https://csgocases.com/profile/1971270",
+                                "fbclid": null,
+                                "lynx_mode": "ASYNCLAZY"
+                              },
+                              "mobileUrl": "https://lm.facebook.com/l.php?u=https%3A%2F%2Fcsgocases.com%2Fprofile%2F1971270&h=AT0RZq7YoiJsjRsfNEn7xoI4F7QUhJhoeIqOLJrAR59i9AW3A82VtHk77_-YkA5vPDbbUUrtO0v3Jk_5CwHFexmgy9cTmGFVEzHsmy6glQlEkbYiLCEpaXExs9_iuvk67rdtcwkUP85AJX5JCRlyIIl55pjDH45EH8jGUUTNkhNosynp&s=1",
+                              "__isNode": "ExternalUrl",
+                              "id": "NjQyMTgzOTU5MjA4MTA3Omh0dHBzXGEvL2NzZ29jYXNlcy5jb20vcHJvZmlsZS8xOTcxMjcwOjpEZWZhdWx0Ojo6MTQxNDU0NTg1NzMzODM1OA=="
+                            },
+                            "entity_is_weak_reference": false,
+                            "length": 37,
+                            "offset": 272
+                          }
+                        ],
+                        "color_ranges": [],
+                        "text": "⚠️AK-47 | Frontside Misty (MW) GIVEAWAY!🎁\nHow to enter:\n👍 Like this post\n✍️ Write your SteamID64\nWinner will be announced after 48h\n\nUpdate:\nThe giveaway winner is: Kittanan Kathaisong\nhttps://www.facebook.com/ta.softwaredev\nSteam ID: 76561198843247980\nCsgocases profile: https://csgocases.com/profile/1971270\nSkin was added to his csgocases account.\nCongratulations!"
+                      },
+                      "message_truncation_line_limit": 2,
+                      "sponsored_data": null,
+                      "attachments": [
+                        {
+                          "action_links": []
+                        }
+                      ],
+                      "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+                    },
+                    "__module_operation_CometFeedStoryMessageMatchRenderer_story": {
+                      "__dr": "CometFeedStoryDefaultMessageRenderingStrategy_message$normalization.graphql"
+                    },
+                    "__module_component_CometFeedStoryMessageMatchRenderer_story": {
+                      "__dr": "CometFeedStoryDefaultMessageRenderingStrategy.react"
+                    }
+                  },
+                  "message_suffix": null,
+                  "message_container": {
+                    "__typename": "CometFeedStoryMessageContainerRenderingStrategy",
+                    "__isICometStorySection": "CometFeedStoryMessageContainerRenderingStrategy",
+                    "is_prod_eligible": true,
+                    "story": {
+                      "message": {
+                        "text": "⚠️AK-47 | Frontside Misty (MW) GIVEAWAY!🎁\nHow to enter:\n👍 Like this post\n✍️ Write your SteamID64\nWinner will be announced after 48h\n\nUpdate:\nThe giveaway winner is: Kittanan Kathaisong\nhttps://www.facebook.com/ta.softwaredev\nSteam ID: 76561198843247980\nCsgocases profile: https://csgocases.com/profile/1971270\nSkin was added to his csgocases account.\nCongratulations!"
+                      },
+                      "referenced_sticker": null,
+                      "attachments": [
+                        {
+                          "style_list": [
+                            "photo",
+                            "fallback"
+                          ]
+                        }
+                      ],
+                      "text_format_metadata": null,
+                      "comet_sections": {
+                        "message": null
+                      },
+                      "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+                    },
+                    "__module_operation_CometFeedStoryMessageContainerMatchRenderer_story": {
+                      "__dr": "CometFeedStoryMessageContainerRenderingStrategy_messageContainer$normalization.graphql"
+                    },
+                    "__module_component_CometFeedStoryMessageContainerMatchRenderer_story": {
+                      "__dr": "CometFeedStoryMessageContainerRenderingStrategy.react"
+                    }
+                  },
+                  "message_sticker": null,
+                  "aggregated_stories": null
+                },
+                "encrypted_tracking": "AZZy9JMHB1v76y39DUSx5_7Oxeuq1DKVhBp_xTownD0tWAEl8BFkXjBqzHL0jFzUtJBYCgKad_6N2wG17xueiCbYmxwqcGiMAHRfak5sBVzy5dIucB8XmI4if8gDnM6VNswbeevg1Ead1LXFwA0ofiug7_HegxfdlW6BDAKPgbCnYmFhoUol5k3UvPo2z_TBN74INfGTnAcaSfHzxPOJT8KaYatdPjoxTPU2wO1EU31-28VdxyVIILVIwaybYBwSqGTQjPQ19XFqbReWgwsDGddZeXk1m1fAQ3tB6uu7LXXlHmG69z514lccZUV_eUk0tP66k3GiV9xmef6uRAWmE7d6QYDwU78-YzGkp-rhBRvi09tEZ-G0ErBzjgNpxmWxVhVZsnXsc1fUPSLfA45O1OKZKxI_vbLg8EwXOLLBOaYMeK3j8dgg8jTgWJPxqysAiK1CpXT5SRkvTRNWUvQM0sm9emVHHmaIpW3ube1ouKdNs-i20pbF5qJI4nm6V-vGX4ksG-IXbvLtfcnw7QpgKKOiWy1yfuEeROIgoEt8ayYu_fa7j28o8anVunzIjzmhSWyQqlVqIdpvkn73AlDTsdP_yG867NanRKi9uttrDZjG8NvpuW18pHpflZvFGQx3S3YDOx_Yz4xZflHsL0jYouGatHZjokuE97u45ffZMEiiV9x6t86uDOE0WlckBStBpRj_7brhSQYjZ7D_Tj_8Rg3WNmMjfE5XOZntI5AJem0Uu6G_mlvTytO6dVHB35B8jnO2GGtxNqLF1f8qt5M6Bd6_-Sup6rvuRslC4vhXYSqWvj51AMDiVj708sppdyDHERi5pdINmsXmDDHEmMuosEJ-g5pl6u-YvxDoKYPVeaQVxdDpvgKWKWfH1f7WmqSrKgRzJrSmYtQn1XURXo1gU1d-V-l3MzVg8ibp-RrPEElOmwt_uYqxfzyyZ5k5nJ-7v-uLmc_0OZm3BxyjS75ZFZgFP1J92RQvCjePmhVCanJGMH3VRhX7xO9D3BRAav26eN5JLWezc9mlMlM4H8ItltiP76bJWBD3lSij1ZpcKKVMGoRQ-lnpdwit0vFN870WA6jjdDAug0O0YJEwM4plRum0MMdGhtr1tjmmjjPnhw2C-Z4qLcTENXeH-fNkrst6ccTOt-HIFtUp-g-9xLruCAx4Zw4DRe9Pe49CP599XcwQAXnZuJl80Zz8cfyDjdxw9P_zmLJuC5WfJhMsaAtq-KoQ8vG3m7yovntqfFfmMapgTZ49krtNBaOR9FWxrCRrY81i9f9EVh2jcYMWHu7TW1tGLVrR9RUUkJ2z060AEg4dwg",
+                "attachments": [
+                  {
+                    "deduplication_key": "7044a68cb515880fcc17cba030ae4049",
+                    "target": {
+                      "__typename": "Photo",
+                      "id": "1414545810671696"
+                    },
+                    "__typename": "StoryAttachment",
+                    "style_list": [
+                      "photo",
+                      "fallback"
+                    ],
+                    "styles": {
+                      "__typename": "StoryAttachmentPhotoStyleRenderer",
+                      "__isStoryAttachmentStyleRendererUnion": "StoryAttachmentPhotoStyleRenderer",
+                      "is_prod_eligible": true,
+                      "attachment": {
+                        "media": {
+                          "__typename": "Photo",
+                          "__isMedia": "Photo",
+                          "accent_color": "FF051012",
+                          "viewer_image": {
+                            "height": 720,
+                            "width": 1280
+                          },
+                          "photo_product_tags": [],
+                          "focus": {
+                            "x": 0.5,
+                            "y": 0.33
+                          },
+                          "photo_image": {
+                            "uri": "https://scontent.fssa7-1.fna.fbcdn.net/v/t39.30808-6/595905569_1414545814005029_6170933189478112281_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DoO5SXqck9AQ7kNvwE8Kxvx&_nc_oc=Admk8Sd8dmAI_5poxoL9np2-xbB88B0V5pwOlDpQLIIQEjL_6YBXN0N2krvuZ9-DIVXWahj7tZw5yqKgCTFLy_Fo&_nc_zt=23&_nc_ht=scontent.fssa7-1.fna&_nc_gid=irFXuxI2-qVCIXT8M8506A&oh=00_AfnyJvSAxww74Lz_lC2-wXN8NfQv9orqarKqnI6CmO6_7w&oe=6946157F",
+                            "height": 540,
+                            "width": 960
+                          },
+                          "accessibility_caption": "Pode ser uma imagem de texto que diz \"CSGOCASES ЛAAKa 3423423 रग 2 GIVEAWAY AK-47|FR AK-47| FRONTSIDE 48H MISTY to ENTER: 7.62 1. 2. 3. Like WriteyourSteamID4 Write your SteamlD64 Share\"",
+                          "url": "https://www.facebook.com/photo/?fbid=1414545810671696&set=a.510687047724248",
+                          "id": "1414545810671696",
+                          "feedback": {
+                            "can_viewer_comment": false,
+                            "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA=="
+                          },
+                          "__isNode": "Photo",
+                          "comet_product_tag_feed_overlay_renderer": null,
+                          "comet_product_tag_dot_hint_renderer": null,
+                          "creation_story": {
+                            "target_group": null,
+                            "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+                          }
+                        }
+                      },
+                      "__module_operation_CometFeedStoryAttachmentMatchRenderer_attachment": {
+                        "__dr": "CometFeedStoryPhotoAttachmentStyle_styleTypeRenderer$normalization.graphql"
+                      },
+                      "__module_component_CometFeedStoryAttachmentMatchRenderer_attachment": {
+                        "__dr": "CometFeedStoryPhotoAttachmentStyle.react"
+                      }
+                    },
+                    "throwbackStyles": null,
+                    "comet_footer_renderer": null,
+                    "comet_footer_disclaimer_renderer": null,
+                    "media": {
+                      "__typename": "Photo",
+                      "__isNode": "Photo",
+                      "id": "1414545810671696"
+                    },
+                    "all_subattachments": {
+                      "nodes": []
+                    }
+                  }
+                ],
+                "future_of_feed_info": {
+                  "dominant_readable_color": "#006969"
+                },
+                "sponsored_data": null,
+                "text_format_metadata": null,
+                "post_id": "1414545857338358",
+                "actors": [
+                  {
+                    "profile_picture": {
+                      "uri": "https://scontent.fssa7-1.fna.fbcdn.net/v/t39.30808-1/301794957_510687054390914_751790882592488061_n.jpg?stp=cp0_dst-jpg_s50x50_tt6&_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=Q9IALEvOTAgQ7kNvwEXjPj4&_nc_oc=AdnkX39l5DLZLDeXOA279Xt-kNahG5dbF5OwqkAn7t24avXhh2s0SjxT7ODtjICA6-RO1DvrsUE_1RJa3j_ZMpmv&_nc_zt=24&_nc_ht=scontent.fssa7-1.fna&_nc_gid=irFXuxI2-qVCIXT8M8506A&oh=00_AfloO6zi4x-cFTOrgvP5jyqNjStRMeU1zoG0YhJfdgRnQA&oe=6946151D"
+                    },
+                    "__typename": "User",
+                    "id": "100063488716198",
+                    "name": "csgocases.com",
+                    "__isEntity": "User",
+                    "url": "https://www.facebook.com/csgocasescom"
+                  }
+                ],
+                "message": {
+                  "__typename": "TextWithEntities",
+                  "text": "⚠️AK-47 | Frontside Misty (MW) GIVEAWAY!🎁\nHow to enter:\n👍 Like this post\n✍️ Write your SteamID64\nWinner will be announced after 48h\n\nUpdate:\nThe giveaway winner is: Kittanan Kathaisong\nhttps://www.facebook.com/ta.softwaredev\nSteam ID: 76561198843247980\nCsgocases profile: https://csgocases.com/profile/1971270\nSkin was added to his csgocases account.\nCongratulations!"
+                },
+                "ghl_mocked_encrypted_link": null,
+                "ghl_label_mocked_cta_button": null,
+                "wwwURL": "https://www.facebook.com/csgocasescom/posts/pfbid025ezcpjGNcaXTz7H8uHNuyF9ZouSWGa88kiTvoSATuJfrY7gwoWrgPEQoXEVfd3SLl",
+                "target_group": null,
+                "attached_story": null,
+                "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+              },
+              "__module_operation_CometFeedStoryContentMatchRenderer_story": {
+                "__dr": "CometFeedStoryDefaultContentStrategy_content$normalization.graphql"
+              },
+              "__module_component_CometFeedStoryContentMatchRenderer_story": {
+                "__dr": "CometFeedStoryDefaultContentStrategy.react"
+              }
+            },
+            "layout": {
+              "__typename": "CometStoryDefaultLayoutStrategy",
+              "__isICometStorySection": "CometStoryDefaultLayoutStrategy",
+              "is_prod_eligible": true,
+              "__module_operation_CometFeedStoryLayoutMatchRenderer_story": {
+                "__dr": "CometFeedStoryDefaultLayoutStrategy_layout$normalization.graphql"
+              },
+              "__module_component_CometFeedStoryLayoutMatchRenderer_story": {
+                "__dr": "CometFeedStoryDefaultLayoutStrategy.react"
+              }
+            },
+            "copyright_violation_header": null,
+            "header": null,
+            "context_layout": {
+              "__typename": "CometFeedStoryDefaultContextLayoutStrategy",
+              "__isICometStorySection": "CometFeedStoryDefaultContextLayoutStrategy",
+              "is_prod_eligible": true,
+              "local_alerts_story_menu_promotion": null,
+              "story": {
+                "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg=",
+                "debug_info": null,
+                "serialized_frtp_identifiers": null,
+                "can_viewer_see_menu": false,
+                "comet_sections": {
+                  "actor_photo": {
+                    "__typename": "CometFeedStoryActorPhotoStrategy",
+                    "__isICometStorySection": "CometFeedStoryActorPhotoStrategy",
+                    "is_prod_eligible": true,
+                    "story": {
+                      "actors": [
+                        {
+                          "__typename": "User",
+                          "__isActor": "User",
+                          "id": "100063488716198",
+                          "__isEntity": "User",
+                          "url": "https://www.facebook.com/csgocasescom",
+                          "work_foreign_entity_info": null,
+                          "work_info": null,
+                          "story_bucket": {
+                            "nodes": [
+                              {
+                                "should_show_close_friend_badge": false,
+                                "id": "109503604509263",
+                                "first_story_to_show": null
+                              }
+                            ]
+                          },
+                          "live_video_for_comet_live_ring": null,
+                          "profile_url": "https://www.facebook.com/csgocasescom",
+                          "name": "csgocases.com",
+                          "profile_picture": {
+                            "uri": "https://scontent.fssa7-1.fna.fbcdn.net/v/t39.30808-1/301794957_510687054390914_751790882592488061_n.jpg?stp=cp0_dst-jpg_s40x40_tt6&_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=Q9IALEvOTAgQ7kNvwEXjPj4&_nc_oc=AdnkX39l5DLZLDeXOA279Xt-kNahG5dbF5OwqkAn7t24avXhh2s0SjxT7ODtjICA6-RO1DvrsUE_1RJa3j_ZMpmv&_nc_zt=24&_nc_ht=scontent.fssa7-1.fna&_nc_gid=irFXuxI2-qVCIXT8M8506A&oh=00_AfkipCsMBUXVbjKYg5NfcLRC6EkJdIhyaHpcTKchUJ-koQ&oe=6946151D",
+                            "width": 40,
+                            "height": 40,
+                            "scale": 1
+                          },
+                          "is_additional_profile_plus": true,
+                          "delegate_page": {
+                            "is_business_page_active": false,
+                            "id": "1997942563814396"
+                          }
+                        }
+                      ],
+                      "comet_sections": {
+                        "action_link": null
+                      },
+                      "attachments": [
+                        {
+                          "action_links": []
+                        }
+                      ],
+                      "sponsored_data": null,
+                      "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+                    },
+                    "has_commerce_attachment": false,
+                    "__module_operation_CometFeedStoryActorPhotoSectionMatchRenderer_story": {
+                      "__dr": "CometFeedStoryActorPhotoStrategy_actorPhoto$normalization.graphql"
+                    },
+                    "__module_component_CometFeedStoryActorPhotoSectionMatchRenderer_story": {
+                      "__dr": "CometFeedStoryActorPhotoStrategy.react"
+                    }
+                  },
+                  "metadata": [
+                    {
+                      "__typename": "CometFeedStoryMinimizedTimestampStrategy",
+                      "__isICometStorySection": "CometFeedStoryMinimizedTimestampStrategy",
+                      "is_prod_eligible": true,
+                      "override_url": null,
+                      "video_override_url": null,
+                      "story": {
+                        "creation_time": 1765309217,
+                        "unpublished_content_type": "PUBLISHED",
+                        "url": "https://www.facebook.com/csgocasescom/posts/pfbid025ezcpjGNcaXTz7H8uHNuyF9ZouSWGa88kiTvoSATuJfrY7gwoWrgPEQoXEVfd3SLl",
+                        "ghl_label": null,
+                        "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+                      },
+                      "__module_operation_CometFeedStoryMetadataSectionMatchRenderer_story": {
+                        "__dr": "CometFeedStoryMinimizedTimestampStrategy_timestamp$normalization.graphql"
+                      },
+                      "__module_component_CometFeedStoryMetadataSectionMatchRenderer_story": {
+                        "__dr": "CometFeedStoryMinimizedTimestampStrategy.react"
+                      }
+                    },
+                    {
+                      "__typename": "CometFeedStoryAudienceStrategy",
+                      "__isICometStorySection": "CometFeedStoryAudienceStrategy",
+                      "is_prod_eligible": true,
+                      "story": {
+                        "privacy_scope": {
+                          "icon_image": {
+                            "name": "everyone"
+                          },
+                          "description": "Público"
+                        },
+                        "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+                      },
+                      "__module_operation_CometFeedStoryMetadataSectionMatchRenderer_story": {
+                        "__dr": "CometFeedStoryAudienceStrategy_audience$normalization.graphql"
+                      },
+                      "__module_component_CometFeedStoryMetadataSectionMatchRenderer_story": {
+                        "__dr": "CometFeedStoryAudienceStrategy.react"
+                      }
+                    }
+                  ],
+                  "title": {
+                    "__typename": "CometFeedStoryTitleWithActorStrategy",
+                    "__isICometStorySection": "CometFeedStoryTitleWithActorStrategy",
+                    "is_prod_eligible": true,
+                    "story": {
+                      "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg=",
+                      "actors": [
+                        {
+                          "__typename": "User",
+                          "name": "csgocases.com",
+                          "id": "100063488716198",
+                          "__isActor": "User",
+                          "__isEntity": "User",
+                          "url": "https://www.facebook.com/csgocasescom",
+                          "work_foreign_entity_info": null,
+                          "work_info": null
+                        }
+                      ],
+                      "collaborators": [],
+                      "title": null,
+                      "comet_sections": {
+                        "action_link": null,
+                        "follow_button": null,
+                        "badge": null
+                      },
+                      "encrypted_tracking": "AZbx247aHkl_Itfh7ZprPzuIN2gdqrKntGKX-psJYQIYvzdjD6Z-5FZEIi36yDqMv_1beKw8VH-0m7F7TOW8J3LKfsY1GJDeuv5Z8UNXYGWlSpNz3Rlj9BTrck-xvNA8qOuoCu12HqSMK7u44H2oe169LncBC9feHK6PffZk8wdOSjZz9Me5gGE2104mLhMctUODFLuXGvucH32U51eQ_PpMSJhilCcrcXSaUfwNwQ0xDeaFN608ggFKkoly5CDTFVjUX594rafy4YsHs4a-as_hiIKlrO3WjEGSB61FxU9PUJutNZu39R8XeyjeP5s56Z1brOa3PZo9JN2Edb_rAU7hlz7uukJqEPJdcerhBJhJ7o6RdeY-vvYBnL7aNUXmECiWl_xuXGReDA-ujOBDENyRB8UUCSw8dx_2aEy97BjeWdkM-TMVCsypQVy9Kg8SaOnoN27-8HaOW8agDpfHL5Lj_F0QGOXwimc-oR3AiYS05IQwYBxa6kl0RfoTuuf_vjjbEw5_7gDy6k4JYzGH7zjeh0Pvx-oADSdMcjv9MWk8snudR_hxIxK3-_TguDBJ5GfkUIR6OLDGQdBXT6MTutveM1jWbxjohp4rbkvX2PYXEeBfY_v1canONu4h--iNMPFfCZYoNsTjTJrbUnpIgWxH_-ckoY4CBXolYeVyOw_Basqio9RvdQlLbipNrCRODLOtwVwpqsxMvP4Dt5Qtyk-vVe3gxXxZlyNknqVtBEZ-4eKnvWnnCEqF8ohLe5boyXXEEVTSnmS0NswMpd4yIAZj3QN4K-8HRITam9AIJrZsX-ZwUmIkdP26IPnOSvuMcAeFBuyewFXxs1frUXk6V8pMf7XCp4vYsbvpGq1DmTUgC025_dTZBKDyOBbNSLZsAoUVBcC2UYUIcv4QBLC_jP4IHBUji3I3prp4mNyVwoIy0IIl9zQSnfjXhiCR7JSWNnwtHknuHPpJtTEIoHcP7320tmQ5W8vVA67AFgplMow4lGXSMXsNYs5-tdOhf5uye6YZogdkgrZF4swr4EsKDrgC5qQA8XizDCSW7Pw3jlk3VqKC6VUwGEmBlmnrM5C5-bpiyu4u4l4-egHxt0chnlMuIYkTKtQY6_cM2iQR1LEYb5IWoykLyTxOYbAPpJkWo4ro_U6Td6ZYRNZZbZ6ItL7mpPfk3YxDYdLIHoKLFGKS5R1ItA2s5RS22GH5p8snRPq85iZWN8XH57SPMLIWzBZF8LEMRGUKG6lfkguNlSJ7Noox2h8ZAvXMbso5QW-xu4ZHYapFoJwLZz-Onh5NzSX82D4Wutju3Bf8uFds0aBJAg",
+                      "to": null
+                    },
+                    "__module_operation_CometFeedStoryTitleSectionMatchRenderer_story": {
+                      "__dr": "CometFeedStoryTitleWithActorStrategy_contextTitle$normalization.graphql"
+                    },
+                    "__module_component_CometFeedStoryTitleSectionMatchRenderer_story": {
+                      "__dr": "CometFeedStoryTitleWithActorStrategy.react"
+                    }
+                  }
+                },
+                "encrypted_tracking": "AZYY91LNItlS-ujZ9j11Ei8pr-aDsh7xU33GC8jFSArSjQ44CZj2bawC0gtVB-IqKr59_OHbnQd007lv_PYpscV-K3IEz6SVvU9gLCJuc3rwN23DRBNu7GPOSMwG8Du57zvNORYlqdx_9eTMFvIEf71RA9brrC3BeN3i50M41Y3CzdSWTUUVL-SX83y008sGfqhIf9prNKPwsK_aAHFmP-reOLVNgpnaXYVv6AgGdYA0pNoLJ9S5aWVMkC9oyIhFM9S7xLZ1lUJd7AeD1lpj71FwXvk3z24tvbyArb_VFV0hjxOLMiMYA4T9z4nKOuWIneNfd0IPYZxut5Ed0vIZA_CNalcpTnlpsSpFZzjahGAw4x6KYGGIXXwRFDdkSj0vBjK6dc1w2DbwDNXE6ph_a0OdDglCJ9Rpw90iEb8DSBvpTEehc7Gy1DDswyBlCJpkasjWdGISWtPyd9gx1rT1zD35Dwbl0OxMvlbBqKIN53c7pDjdeHhVOt8svWJiROQqzK13VRK7IWhRB0L6YdCqiID-DIqENPRP1UQeOlpr-ODzEgacjks40eLPRtVd9t7-_OKc0cml1QXpNiXLCRJYLFOeDA-C5cBoC-qW4nG5sUk_nm6ZGn4jvaBP-de233LcFh5EA5D3puJzVaxclhBU690i1o8uL5oyxvh-8NO4ocSHNXqv3Xt-sQBASWJkcjtVUGWhjM4hX4LT_mRGniUC3pdVBbU45YKxxnLnm9NfLrVVh5VCaCHz9-Y7z18A63nY7dQyP8hQ_TN7Pm0XgwIRaK_Zj0IXd6rAkoKPBkpadAMg7G1lhchQuIm1D4pCDfeOYxVvAwDPRbrm8mc_tuPm0d9BiEMaLYfUPYmFLuit-q45eMAIvIOl6mVOhedH1dTrXSkCOM6yH2LRKp_LlB9xY6JRlVdFmZPcsiV5sQapkrhqNtGiyNv2i3fZMN7uuXsYSWV2NTk11wN3Ny_FbvLA0oN5LUpQle-y3fenZiDLr6HWY111EyOdg78zFVmyHACMV-6KDcOXx7N76_UcXppV9in35h7OJlec1B81rmryQCtPRT6m9-aRlfeY7hMLWbxZ0_l36Mw5i8-WMexMZ2F4tH0CMLt_8F6d9SX1lTVQePX7dgJWTjegtVJJcLXsrEIVXHy0CeNFg6TgG2a_-x3aMPhsWOF7sri77hlUgBb9yLMzZt55mHDkuqDXbkTHkgPRdulkm7oc5y1QIu-ctipE5KSLR9DRmN_lFYQLNcYjxiUwK6WlUzKWp_6XlhUBnRm7nKl09-Y69K0qSL5132d3yetGKLnQOgXq_kXEYclOTCojxA",
+                "easy_hide_button_story": null
+              },
+              "is_regulation_enforced": false,
+              "__module_operation_CometFeedStoryContextSectionMatchRenderer_story": {
+                "__dr": "CometFeedStoryDefaultContextLayoutStrategy_contextLayout$normalization.graphql"
+              },
+              "__module_component_CometFeedStoryContextSectionMatchRenderer_story": {
+                "__dr": "CometFeedStoryDefaultContextLayoutStrategy.react"
+              }
+            },
+            "aymt_footer": null,
+            "footer": null,
+            "feedback": {
+              "__typename": "CometStoryFeedbackUFIStrategy",
+              "__isICometStorySection": "CometStoryFeedbackUFIStrategy",
+              "is_prod_eligible": true,
+              "story": {
+                "feedback_context": {
+                  "feedback_target_with_context": {
+                    "viewer_actor": null,
+                    "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA=="
+                  }
+                },
+                "story_ufi_container": {
+                  "__typename": "XFBSimplifiedUFIContainer",
+                  "story": {
+                    "encrypted_tracking": "AZY2oLNHg0B4cGZeca2BxjLd7bTp8Ll9fskCtHXOFTGovoDXvE0uKivTrcC4cSuIjcNfgChXvm0uvfKN4doYAGXqs8gpnfxdLl_lIteRgC1rAHPSnk23LOH4P_9Gf_qxf3aGcx_p-rsMIgLk4htgIQ-l5ijKknqzQINmVTzNLf8cqTUbyuRDRgVX1DunO0-Lj5_JNnrvkn0P0T1cOQluEmDCexj47YjqeDLhfKpZruxGb3V6eODqbvqxwZOvCseXXuP9UK5o3MveIz0Vk3O5Wv-n09suFHPzBJCOKOgiwNdLYnmzYU06o_6y-i2vnWB6TvzbVES7efiLSNq5TupK-LYQndGoHHVLX0G6rU5dN2-ltVLI3S_Bx3qVdhkPSWfbuTNYIEA81s2hUzdp3YPVXUH-sqX8Emj0-SoZS3Cuio4sMwFftxk-ZLXD3opMwi61uFJIYBKCEX65k79kaeG1x7Cmgh61XBZKfRPeVL0q_qZ81XSc0bEyI3jaGNGOh-5TDyirSqCBcmVajVGdqwvBMeUrHtu7ZHbZnTfXOr3-Sl3_ZEx2a2YJRsGfeQF-eUtJ8rCy5tZLLfbeeNAkJd4oTdrMCQH_oNfBu9JLmdBF9kf-3X5XvP5y21bgow8Obrbm54QPrdHY8K75FW0zmL-57en-CZ_1Bi0vBq9cuZjNiWxC1UBg7eq67ZXJyd45bxhn18iFLr3qUjHPawIxJuEQ88aqSVArpX5aePjMe37KAm8fn8ay88QosCLQF0vlQ8p_9KLFxMDVwId2VAjJt0Vpd7u6QPFrI42psfCoKhFxH6oyMscd7q5D8zlfEdhuVGRQ7QqflH8mHQ08ZC_GGK3PtHQiNayIPOCTpUMvWS9Fe7ZEAFQMkXzpzKxc505p7EzV30fxjYcaEZ4ZHaUptgmVqw0r5qw_oZMtb02cmARsyobK-nTD4DY-injhiwDcnM_gA1h9Z_aL580z0P6Bjinq-csekamlFx7MRQE7Raa265L-PTPT3nvWZegLJBd6dOuBn-a0reJrT6nsO7kaOQo1wBXnFYKvMjFbKVU0ygdiIJMIhPDd_gV512l6p87r3QmMQy9Na-Jl0QCHVkrlKh7DXOOcVIWYE7dbXBMdRV70JbOjFgNovJOSzglCPoj7DbI-P_ehdNxcBxn5X3ND-8R7bmckYpJanWzXedFKtIQ5eqVoZHpTRuSDdpHff4MLMWOJxqI23_z1BcuDWpFImrhiSwGmlhjUoQ_XNcYZA9iTanbc5ffISbfMJP_AojYCUqDA2NW8H7uYqZdiu8MR1ES86h_kOFaQSV2qzua5f23dKKAYiA",
+                    "is_text_only_story": false,
+                    "feedback_context": {
+                      "feedback_target_with_context": {
+                        "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA==",
+                        "owning_profile": {
+                          "__typename": "User",
+                          "name": "csgocases.com",
+                          "short_name": "csgocases.com",
+                          "id": "100063488716198"
+                        },
+                        "can_viewer_comment": false,
+                        "comet_ufi_summary_and_actions_renderer": {
+                          "__typename": "UnauthenticatedUCometUFISummaryAndActionsRenderer",
+                          "feedback": {
+                            "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA==",
+                            "is_similar_cqa_question": false,
+                            "subscription_target_id": "1414545857338358",
+                            "i18n_reaction_count": "520",
+                            "important_reactors": {
+                              "nodes": []
+                            },
+                            "reaction_count": {
+                              "count": 520,
+                              "is_empty": false
+                            },
+                            "top_reactions": {
+                              "count": 2,
+                              "edges": [
+                                {
+                                  "visible_in_bling_bar": true,
+                                  "node": {
+                                    "id": "1635855486666999",
+                                    "localized_name": "Curtir"
+                                  },
+                                  "i18n_reaction_count": "495",
+                                  "reaction_count": 495
+                                },
+                                {
+                                  "visible_in_bling_bar": false,
+                                  "node": {
+                                    "id": "1678524932434102",
+                                    "localized_name": "Amei"
+                                  },
+                                  "i18n_reaction_count": "25",
+                                  "reaction_count": 25
+                                }
+                              ]
+                            },
+                            "reaction_display_config": {
+                              "reaction_display_strategy": "NONE",
+                              "reaction_string_with_viewer": null,
+                              "reaction_string_without_viewer": null,
+                              "__module_operation_CometUFIReactionsCount_feedback": {
+                                "__dr": "CometUFIReactionSentence_reactionDisplayConfig$normalization.graphql"
+                              },
+                              "__module_component_CometUFIReactionsCount_feedback": {
+                                "__dr": "CometUFIReactionSentence.react"
+                              }
+                            },
+                            "viewer_actor": null,
+                            "viewer_feedback_reaction_info": null,
+                            "can_show_seen_by": false,
+                            "if_viewer_can_see_seen_by_member_list": null,
+                            "if_viewer_cannot_see_seen_by_member_list": {
+                              "i18n_reaction_count": "520",
+                              "reaction_count": {
+                                "count": 520
+                              },
+                              "reaction_display_config": {
+                                "reaction_display_strategy": "NONE"
+                              },
+                              "seen_by": {
+                                "count": 0,
+                                "i18n_seen_by_count": null,
+                                "seen_by_everyone": false
+                              },
+                              "__module_operation_CometUFISeenByCount_feedback__if_viewer_cannot_see_seen_by_member_list": {
+                                "__dr": "CometUFISeenByCountText_feedback$normalization.graphql"
+                              },
+                              "__module_component_CometUFISeenByCount_feedback__if_viewer_cannot_see_seen_by_member_list": {
+                                "__dr": "CometUFISeenByCountText.react"
+                              },
+                              "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA=="
+                            },
+                            "i18n_share_count": "75",
+                            "share_count": {
+                              "count": 75,
+                              "is_empty": false
+                            },
+                            "comments_count_summary_renderer": {
+                              "__typename": "TotalCommentsCountSummaryRenderer",
+                              "feedback": {
+                                "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA==",
+                                "comment_rendering_instance": {
+                                  "comments": {
+                                    "total_count": 408
+                                  }
+                                }
+                              },
+                              "__module_operation_CometUFISummaryBase_feedback": {
+                                "__dr": "CometUFICommentsCountRenderer_data$normalization.graphql"
+                              },
+                              "__module_component_CometUFISummaryBase_feedback": {
+                                "__dr": "CometUFICommentsCountRenderer.react"
+                              }
+                            },
+                            "associated_video": null,
+                            "comment_rendering_instance": {
+                              "comments": {
+                                "total_count": 408
+                              }
+                            },
+                            "page_private_reply": null,
+                            "video_view_count": null,
+                            "video_view_count_renderer": null
+                          },
+                          "__module_operation_CometUFISummaryAndActions_feedback": {
+                            "__dr": "CometUnauthenticatedUFISummaryAndActionsRenderer_feedback$normalization.graphql"
+                          },
+                          "__module_component_CometUFISummaryAndActions_feedback": {
+                            "__dr": "CometUnauthenticatedUFISummaryAndActionsRenderer.react"
+                          }
+                        },
+                        "is_community_qa_or_qaish_post": false,
+                        "threading_config": null,
+                        "actor_provider": {
+                          "__typename": "Feedback",
+                          "current_actor": null,
+                          "id": "ZmVlZGJhY2s6MTQxNDU0NTg1NzMzODM1OA=="
+                        },
+                        "comment_rendering_instance": {
+                          "comments": {
+                            "total_count": 408
+                          }
+                        },
+                        "url": "https://www.facebook.com/csgocasescom/posts/pfbid025ezcpjGNcaXTz7H8uHNuyF9ZouSWGa88kiTvoSATuJfrY7gwoWrgPEQoXEVfd3SLl",
+                        "__typename": "Feedback",
+                        "if_viewer_can_comment_anonymously": null,
+                        "viewer_actor": null,
+                        "plugins": [
+                          {
+                            "__typename": "CommentComposerMentionsPlugin",
+                            "context_id": null,
+                            "post_id": "1414545857338358",
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerMentionsPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerMentionsPlugin"
+                            }
+                          },
+                          {
+                            "__typename": "CommentComposerHashtagPlugin",
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerHashtagPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerHashtagPlugin"
+                            }
+                          },
+                          {
+                            "__typename": "CommentComposerEmojiPlugin",
+                            "emoji_size": 16,
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerEmojiPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerEmojiPlugin"
+                            }
+                          },
+                          {
+                            "__typename": "CommentComposerEmoticonPlugin",
+                            "emoji_size": 16,
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerEmoticonPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerEmoticonPlugin"
+                            }
+                          },
+                          {
+                            "__typename": "CommentComposerPrefillMentionPlugin",
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerPrefillMentionPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerPrefillMentionPlugin"
+                            }
+                          },
+                          {
+                            "__typename": "CommentComposerAssociateReplyWithParentPlugin",
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerAssociateReplyWithParentPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerAssociateReplyWithParentPlugin"
+                            }
+                          },
+                          {
+                            "__typename": "CommentComposerSetReplyClickedPlugin",
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerSetReplyClickedPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerSetReplyClickedPlugin"
+                            }
+                          },
+                          {
+                            "__typename": "CommentComposerStateSnapshotPlugin",
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerStateSnapshotPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerStateSnapshotPlugin"
+                            }
+                          },
+                          {
+                            "__typename": "CommentComposerCommentCharacterLimitPlugin",
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerCommentCharacterLimitPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerCommentCharacterLimitPlugin"
+                            }
+                          },
+                          {
+                            "__typename": "CommentComposerWriteToComposerPlugin",
+                            "__module_operation_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerWriteToComposerPlugin_plugin$normalization.graphql"
+                            },
+                            "__module_component_useCometUFIComposerPlugins_feedback": {
+                              "__dr": "cometUFIComposerWriteToComposerPlugin"
+                            }
+                          }
+                        ],
+                        "comment_composer_placeholder": "Comente…",
+                        "have_comments_been_disabled": false,
+                        "default_comment_ordering_mode": "RANKED_THREADED",
+                        "inline_composer_visible_by_default": false,
+                        "associated_group": null,
+                        "work_comment_summaries_from_feedback": null,
+                        "are_live_video_comments_disabled": false,
+                        "is_viewer_muted": false,
+                        "comments_disabled_notice_renderer": {
+                          "__typename": "GeneralCommentDisableNotice",
+                          "notice_message": {
+                            "delight_ranges": [],
+                            "image_ranges": [],
+                            "inline_style_ranges": [],
+                            "aggregated_ranges": [],
+                            "ranges": [],
+                            "color_ranges": [],
+                            "text": "Os comentários foram desativados para esse post."
+                          },
+                          "__module_operation_CometUFICommentDisabledNotice_feedback": {
+                            "__dr": "CometGenericCommentDisableNotice_commentDisableNotice$normalization.graphql"
+                          },
+                          "__module_component_CometUFICommentDisabledNotice_feedback": {
+                            "__dr": "CometGenericCommentDisableNotice.react"
+                          }
+                        },
+                        "comment_moderation_filter_restriction_notice": null
+                      },
+                      "interesting_top_level_comments": []
+                    },
+                    "shareable_from_perspective_of_feed_ufi": null,
+                    "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg=",
+                    "url": "https://www.facebook.com/csgocasescom/posts/pfbid025ezcpjGNcaXTz7H8uHNuyF9ZouSWGa88kiTvoSATuJfrY7gwoWrgPEQoXEVfd3SLl",
+                    "post_id": "1414545857338358",
+                    "tracking": "{\"qid\":\"-7781393244029780018\",\"mf_story_key\":\"1414545857338358\",\"top_level_post_id\":\"1414545857338358\",\"tl_objid\":\"1414545857338358\",\"content_owner_id_new\":\"100063488716198\",\"throwback_story_fbid\":\"1414545857338358\",\"page_id\":\"1997942563814396\",\"photo_id\":\"1414545810671696\",\"story_location\":4,\"story_attachment_style\":\"photo\",\"sty\":22,\"ent_attachement_type\":\"MediaAttachment\",\"page_insights\":{\"100063488716198\":{\"page_id\":\"100063488716198\",\"page_id_type\":\"page\",\"actor_id\":\"100063488716198\",\"dm\":{\"isShare\":0,\"originalPostOwnerID\":0,\"sharedMediaID\":0,\"sharedMediaOwnerID\":0},\"psn\":\"EntStatusCreationStory\",\"post_context\":{\"object_fbtype\":266,\"publish_time\":1765309217,\"story_name\":\"EntStatusCreationStory\",\"story_fbid\":[\"1414545857338358\"]},\"role\":1,\"sl\":4,\"targets\":[{\"actor_id\":\"100063488716198\",\"page_id\":\"100063488716198\",\"post_id\":\"1414545857338358\",\"role\":1,\"share_id\":0}]}},\"profile_id\":\"100063488716198\",\"actrs\":\"100063488716198\",\"tds_flgs\":3}",
+                    "sponsored_data": null,
+                    "inform_treatment_for_messaging": null,
+                    "target_group": null,
+                    "click_tracking_linkshim_cb": "AT093QM9zI3df33BhyVBRhEmtwpb0Qatx7AI7SxUG2IDrppDx420fH-GyzwcCY1j8AsQBCpqvQRSBGPMI-Ir3yiqAOeyANeoZyvmBFghaN4gB25qrPYJ63iP46jkleWHUcvtFzc5f9Aji1NEd7OE5I8XRnhAarwqU5CyRtwBLuv-jpJOUYuJwI8Q82PVZc80d7lpqlbjCbPH094ZwK9GAROIYg",
+                    "encrypted_click_tracking": "AZZ9fTIMrXdCgb0vX-oiIQTKeI4XWqdQPjc_NKVKPVW-8DeVMRiS7JunES2jfmZNuJ_D0SnmvhuDBa5jOWuTnMPATgmxOta6ELF3jp6-L0oicvn5_q4Fg_NAaQTfWChwvnTPsG14-1AUG6ht1cUL_AmwZTyrfEuGoaotbkNpNiwFVGpVd0rfeiZ5YCvSAvdVqZA",
+                    "__module_operation_useCometUFIAdaptivePostActionBar_story": {
+                      "__dr": "CometUFIAdaptiveShareActionRenderer_story$normalization.graphql"
+                    },
+                    "__module_component_useCometUFIAdaptivePostActionBar_story": {
+                      "__dr": "CometUFIAdaptiveShareActionRenderer.react"
+                    },
+                    "vote_attachments": [],
+                    "feed_backend_data": {
+                      "pcomment": 0
+                    }
+                  },
+                  "__module_operation_CometFeedUFIContainer_story": {
+                    "__dr": "CometSimplifiedUFIContainer_renderer$normalization.graphql"
+                  },
+                  "__module_component_CometFeedUFIContainer_story": {
+                    "__dr": "CometSimplifiedUFIContainer.react"
+                  }
+                },
+                "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+              },
+              "__module_operation_CometFeedStoryFeedbackSection_story": {
+                "__dr": "CometFeedStoryFeedbackUFIStrategy_feedback$normalization.graphql"
+              },
+              "__module_component_CometFeedStoryFeedbackSection_story": {
+                "__dr": "CometFeedStoryFeedbackUFIStrategy.react"
+              }
+            },
+            "outer_footer": null,
+            "call_to_action": {
+              "__typename": "CometStoryDefaultCallToActionStrategy",
+              "__isICometStorySection": "CometStoryDefaultCallToActionStrategy",
+              "is_prod_eligible": true,
+              "story": {
+                "bumpers": null,
+                "tracking": "{\"qid\":\"-7781393244029780018\",\"mf_story_key\":\"1414545857338358\",\"top_level_post_id\":\"1414545857338358\",\"tl_objid\":\"1414545857338358\",\"content_owner_id_new\":\"100063488716198\",\"throwback_story_fbid\":\"1414545857338358\",\"page_id\":\"1997942563814396\",\"photo_id\":\"1414545810671696\",\"story_location\":4,\"story_attachment_style\":\"photo\",\"sty\":22,\"ent_attachement_type\":\"MediaAttachment\",\"page_insights\":{\"100063488716198\":{\"page_id\":\"100063488716198\",\"page_id_type\":\"page\",\"actor_id\":\"100063488716198\",\"dm\":{\"isShare\":0,\"originalPostOwnerID\":0,\"sharedMediaID\":0,\"sharedMediaOwnerID\":0},\"psn\":\"EntStatusCreationStory\",\"post_context\":{\"object_fbtype\":266,\"publish_time\":1765309217,\"story_name\":\"EntStatusCreationStory\",\"story_fbid\":[\"1414545857338358\"]},\"role\":1,\"sl\":4,\"targets\":[{\"actor_id\":\"100063488716198\",\"page_id\":\"100063488716198\",\"post_id\":\"1414545857338358\",\"role\":1,\"share_id\":0}]}},\"profile_id\":\"100063488716198\",\"actrs\":\"100063488716198\",\"tds_flgs\":3}",
+                "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+              },
+              "__module_operation_CometFeedStoryCallToActionSection_story": {
+                "__dr": "CometFeedStoryDefaultCallToActionStrategy_cta$normalization.graphql"
+              },
+              "__module_component_CometFeedStoryCallToActionSection_story": {
+                "__dr": "CometFeedStoryDefaultCallToActionStrategy.react"
+              }
+            },
+            "post_inform_treatment": null,
+            "action_link": null,
+            "timestamp": {
+              "__typename": "CometFeedStoryMinimizedTimestampStrategy",
+              "__isICometStorySection": "CometFeedStoryMinimizedTimestampStrategy",
+              "is_prod_eligible": true,
+              "override_url": null,
+              "video_override_url": null,
+              "story": {
+                "creation_time": 1765309217,
+                "unpublished_content_type": "PUBLISHED",
+                "url": "https://www.facebook.com/csgocasescom/posts/pfbid025ezcpjGNcaXTz7H8uHNuyF9ZouSWGa88kiTvoSATuJfrY7gwoWrgPEQoXEVfd3SLl",
+                "ghl_label": null,
+                "id": "UzpfSTEwMDA2MzQ4ODcxNjE5ODoxNDE0NTQ1ODU3MzM4MzU4OjE0MTQ1NDU4NTczMzgzNTg="
+              },
+              "__module_operation_CometFeedStoryTimestampSection_story": {
+                "__dr": "CometFeedStoryMinimizedTimestampStrategy_timestamp$normalization.graphql"
+              },
+              "__module_component_CometFeedStoryTimestampSection_story": {
+                "__dr": "CometFeedStoryMinimizedTimestampStrategy.react"
+              }
+            }
+          },
+          "encrypted_tracking": "AZZzZUlEcIyu4q0qQ7VfocFr7igr-Oi8uNkQ0JMTEVvoMrd9i-2AoMf00Ggo2V7j1sK8IhXNS0i6-TorawsY6TlL5SxoTZjIvP277-BJ6orJ3GYpCK1Qa5wAzLCC3jvNxBv35lQ8ssrlyIrG0XaKnJArKuxLTmiPpfm5EA5gjH87oUpJ24_nTdUYltOblRSCOGeYfDrRPNr3g33MBo-1RakhBkB1KfLr3vzcKj8jrHFmqortABpYXY5tEowmPN-_nczrxjjKQnT3M9jCR5xPX6Y9CHGGs4wCuq0EF_cMKZIj_UZKfqhTYEYhOVGfTd_4UHD5_XHrC7MVoKIHCOSR6iMLaknik5HY-9YWwplLSmJpOuuBLjZFCSqOsHNJsQHGQZkbNKLbx8EzOWqg1Ca15lAJAykn8vrKj4L1fLLlP-dlb7fPu2zvag8hqWuyviuP9q0eAygUw1dc3Rh6CpASTShTEhwd5e1i0EMbJqZ4veDgDLnuWOe5U4cr3dKKwjj_qkqKjAcHC7P9HeJZQlzbPZ58ujE6cb-sNqfEm1uwsJKMWMkr21s0jihoopF7_WQL9b8pgFSk5Vd1GxC_9fym4qyEVsEiLhclCoEfzYzOiTBv9EPPzWPiUbPLCbqmkDiEbYeuF7qbG26Yy8CXnrLvmikiqGG-nTMdG8lBI1yKwWLAx6yoK5gVCmk53bNNXRCUNudmCfuBAmGZpd1CE3dLhiITcXFFBw-TIXTQJ8vwb07f-1w5GcSkwtKqqty5XCWPPaczf4LJJ8jpp0QNG8IUKhLzaxC1fkV3tWMBEcGa0vHARo-oFRsVhEum-la5vFukS1w79_9q9hTFT8lH8Uvkd9CcTrRNV99t2Sw0g8njs0no7r1EXhCY_ax6Jl-tbb_jLLfy6vdcH-f__0JLiMn8Bz3si_0yadM9daTJbpCQXtmQzDGxuzYJyaW1t6FF1eU5HJTHkJ8G6Z_j6Gap0bI1oGB4TAj2aXxsiRGAtRzf2bq8L56nB_kzAvrGJApl99JeJRcdOTz5J_mqyWIIa-vUy_mwpE5T_GPW3CXngyo_8ttPF1Hiwe60bWZpHN3Q8grP_CR14sSLQ8CnU070TrYa7GVzBeAIg9CEpdUILIP3DC_f0lc-5AduynwP_0XUFZp74HtNwKLMBqkTrQxG_2ITkMm3RGExLi6C1rPRAGMx2lWKyR-aYooNtVKsSjvsS2S40MggD4prrjLheImBgei71GswvdInBn3t5lV5GeJ1z92ZL-5YoCXqnmE7Vgmqv77Ks4buTq1U8_TNmLOoGgqDiq67g3nAXP3izqvbtdYEFbRH4Q",
+          "permalink_url": "https://www.facebook.com/csgocasescom/posts/pfbid025ezcpjGNcaXTz7H8uHNuyF9ZouSWGa88kiTvoSATuJfrY7gwoWrgPEQoXEVfd3SLl",
+          "should_host_actor_link_in_watch": false,
+          "whatsapp_ad_context": null,
+          "schema_context": null,
+          "click_tracking_linkshim_cb": "AT3NZrLLRCDZDNwFjLQcoDj5xYLmO9leUxr8XjEOPT6sH5LePQe4HyfPc4SbpdSaaCZHKBbHs_OhEg5267F3aN3g7VSFJaXZ9PZMfOJDyw3kJ18oO1TuOcPBzKEf2MnMRVpjHwqWKwdNh-ut6FmCc7ae_zqlsjlBo5iFCmZKESrbwAeWoeWptpE015FE6wN4aKpWn6QKXbEMEGVlmQDt-6qDiA",
+          "encrypted_click_tracking": "AZbWxtUlakRjX3w4nWuG-0zffeBMrWeyA1YxgMl9j-P_cPj1uGDAfOgdRuzwbB5FxybziXy6I3oDH6TmJ6xuD7twr4STiaOlR-pygl0wxMkfH1NstcHunzhjj6dqU_KNCsqRF7Ra2_VWvoOAj7azARh76ewg8u1vjkgI3meBvQvpo4T9Z4G17A3ytB49tMtbics",
+          "serialized_frtp_identifiers": null,
+          "can_viewer_see_menu": false,
+          "actors": [
+            {
+              "__typename": "User",
+              "name": "csgocases.com",
+              "id": "100063488716198",
+              "__isActor": "User",
+              "__isEntity": "User",
+              "url": "https://www.facebook.com/csgocasescom",
+              "work_foreign_entity_info": null,
+              "work_info": null
+            }
+          ],
+          "to": null,
+          "work_is_repost": null,
+          "work_reposted_story": null,
+          "__module_operation_CometFeedUnitContainerSection_feedUnit": {
+            "__dr": "CometFeedUnitStoryStrategy_feedUnit$normalization.graphql"
+          },
+          "__module_component_CometFeedUnitContainerSection_feedUnit": {
+            "__dr": "CometFeedUnitStoryStrategy.react"
+          },
+          "__isTrackableFeedUnit": "Story",
+          "trackingdata": {
+            "id": "AZYaQYTWWtvFPQqmqrakbkwxQ-wAYssUSBMX6ijfJJxAP9sa980ZvkMI6X4Nvunq1J-ztw6G11GIvWIgXrcBaln4P4r4xJ9rsgiqGQ0-4_O5RUrdynOWcgN30XThdJ1yMrVgYOvrKzUwN_57xkUUlSkqoPoo4c4J48WSVq9kuOidARMHY1Mf2uDdwNdIKGv-rZqgM0WMLkdOd8P7udNlu8aIWLIkS-G_23j0XBsnfKD89J-OJSwf5DktY6XlDsY7lH2J8uwSAsXAxFDkQeXJeOEAJ1QCfyPVMm3bYvmx0Pmm4ig5WRBKi70O6kvPON_bbz-iV33paRqWsdcbjQ2QDgOhEn2YGJGFvvjGP427oyQ9lUhH10VZSX9x2daPJczuzE7LySdzCz-5ocggJ-Ap4H25KKglDoaofrPj5U0WSQIc1hl4VelcsRemcA4g02nNzog_aCcCDa7nYx9iOb-iuettfP2TE8gGayDbsQjRlivkH3lSEN9g5P87k6284U8re3w2xjBzQCBzoMj6_JUJJbg4gM5LUwx95xxmnJBm2dNTRgzOtHEht__dLaoUURbQlXXSqRqycYlcctVxWAqg-pRutm2G1kPezK57VJAaPVTtkrVBt_KhHeIO6as_xVDISFl_9yzqbVRigoAZpOkpx7FfdSbWnDJHyXq4bm2YgljH7paTUKBoyoUFTPS4LIVpSKmyFWMMAON86DAI_0LCfw3DaEAeYslQzisQLkEXo7yJwdUNeW8p0LVVMu5DvV-DZcaJwZ-X_H8lYk5BfHKjiJBfYrmpTi-qlYQ_mGWlSrYnZVNcwfU1k3-_EZYSocLEtiW9eYOdnN5CUnFVTPZ9EV7XMi1KWK7H4FWg5vfmsAO7mniVH3vwzhwUdevWOrkXtUIG8cQzESD7rfoeZOExSMFcBO2BuBO-6tU4FwAm1eKKeQrJnLR0E9zKAF7Et6hSGpbF_Q4Ro6SvjL1QaO_yuyQ7VK1wpWsRS68026h8Ko58mBtIK5hDUoUxILCETAFXs0I74tRk6AMBLsLx5e-m_gvIuOQkhR8IffJmN5Y-aYisjfhiADkXV1GPpVUgN0sUClh96TsK7JkeRIf8yWdYz6Kk9F_6AnxrSsbEGIF-_8vAXgd6A81owBTY2BExshh2o8Vf1NLQ-nZu_i_2cGYgyDZEoPQ0mFsGp3OzO0DnzlKgIlW7qG8NbQOIRKZ-hMSaOMsZhrcjKriXtZ4c0vDoCzTfJby8sYDU4r2PaBL9Kh7sS2cARsJmuzciNXi3jCR7dtfwMPMYd4o-eTjz0S66jzNG7m67YSnyjta9mSiFNySb4Q"
+          },
+          "viewability_config": [
+            8,
+            5
+          ],
+          "client_view_config": {
+            "can_delay_log_impression": false,
+            "use_banzai_signal_imp": true,
+            "use_banzai_vital_imp": true
+          },
+          "__isNode": "Story"
+        },
+        "cursor": "AQHS_04nHF6UZqnpT-2gaHxMhDU9cpFL8fs0PY5FDd3krVaoj__4QVT_1qgYdDOwpqWLaGctVMmnjQgHL84L_DsCNDXQtfOAGvhSW5WQY5iL0KI_Jt9n1oUKuy3BMvyDQuKmzkvf2pqGyx84KtiBu6mb2IZeER-9gE3rdRIw6UgONfaBWpbSIs2S6vrOplihNffD71Jpnrmokk1NNezxmcmw4-k5iuRR4zQlXQnnLJAe7exBIyBh7s_HpmX44Mm4C8DSpBjv3Ey39QGvmxPVmg9BqbrvfG2DBPC1nUCcC7vzzc3a8Y-BNEJka7u_RLCtXJuq6LNstQK-7WJ34Yl1tKxiR4PSoOhPBVAv4BF-pgWxu7-PUmVBXM0gTNNpz1z_S9A_dYGGe4RPrKf5vAamePMcXpla-xQX5QU4ow_pno51BpOo0oxUTXfo_6g3pk9WCJRtHTeL42bmGiGSJUa0StmL9A"
+      }
+    ]
+  },
+  "profile_pinned_post": null,
+  "ctx_profile_ad4ad_type": "NONE",
+  "promote_uri_for_ctx_profile_ad4ad": null,
+  "post_image_and_caption_profile_ad4ad": [],
+  "is_promode_creator": null,
+  "top_post_cta_type": null,
+  "top_post_id": null,
+  "delegate_page": {
+    "id": "1997942563814396",
+    "category_name": "Site de entretenimento",
+    "name": "csgocases.com",
+    "profile_picture_uri": "https://scontent.fssa7-1.fna.fbcdn.net/v/t39.30808-1/301794957_510687054390914_751790882592488061_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f907e8&_nc_ohc=Q9IALEvOTAgQ7kNvwEXjPj4&_nc_oc=AdnkX39l5DLZLDeXOA279Xt-kNahG5dbF5OwqkAn7t24avXhh2s0SjxT7ODtjICA6-RO1DvrsUE_1RJa3j_ZMpmv&_nc_zt=24&_nc_ht=scontent.fssa7-1.fna&_nc_gid=irFXuxI2-qVCIXT8M8506A&oh=00_AfkyTGu1kzhaLI9mRSXNELdjKeb5CmpwwaLQn7zJqFRKvQ&oe=6946151D",
+    "cover_photo": {
+      "photo": {
+        "image": {
+          "uri": "https://scontent.fssa7-1.fna.fbcdn.net/v/t39.30808-6/476837521_1155872599872353_4938602602221822925_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=dqts-9a_g0cQ7kNvwHp_9Fs&_nc_oc=AdktoHsWyLV1xDQcDw-cAp7aBisvB2AfJ5wye-VYBBoA3j_WglONTC0hbU5eqFmEZmI3YV6vF6188HDp2yds_8i4&_nc_zt=23&_nc_ht=scontent.fssa7-1.fna&_nc_gid=irFXuxI2-qVCIXT8M8506A&oh=00_AfnHMAyAT_yxS55oeJ07s2KKOY0Pjgb1GVvCuvNx_Jk1pA&oe=694614EB"
+        },
+        "id": "1155872596539020"
+      }
+    },
+    "best_description": {
+      "text": "CSGOCASES.COM - CS2 case opening website. Get the best CS2 skins!"
+    },
+    "viewer": {
+      "globe_focus": "WEST"
+    },
+    "ctx_business_adoption_fact_based_benchmark_page_id": {
+      "return_data": null,
+      "benchmark_type": "NONE"
+    }
+  }
+}

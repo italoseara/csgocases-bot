@@ -1,85 +1,59 @@
-# Promocode Scraper
+# CSGOCases Bot
 
-![GitHub License](https://img.shields.io/github/license/italoseara/cs-pro-scraper)
-![GitHub Last commit](https://img.shields.io/github/last-commit/italoseara/cs-pro-scraper/main)
-
-This project is a scraper for the gambling website [cs.pro](https://cs.pro). The scraper collects promotional codes from the website's social media accounts.
+This project is a bot designed to interact with the CSGOCases platform, scraping promocodes from social media posts and automatically redeeming them on the CSGOCases website. The bot features a Textual User Interface (TUI) for easy monitoring and control.
 
 > [!CAUTION]
-> Use this scraper at your own risk. Scraping social media platforms can be against their terms of service. Ensure you understand and comply with the terms of service of each platform before using this scraper.
+> Using bots to interact with websites may violate their terms of service. Use at your own risk, the author is not responsible for any misuse or damages caused by this software.
+
+> [!WARNING] 
+> CSGOCases is a gambling platform. I do not endorse or encourage gambling. This bot is not a gambling tool, but rather a utility to automate the process of redeeming promocodes. Please gamble responsibly and be aware of the risks involved.
 
 > [!IMPORTANT]
-> Gambling can be addictive and harmful. Please gamble responsibly. If you or someone you know has a gambling problem, seek help from professional organizations.
+> I am not affiliated with CSGOCases or any of the social media platforms used for scraping promocodes. This project is for educational purposes only.
 
 ## Features
 
-- Scrapes promocodes from various social media platforms.
-- Supports Instagram, Facebook, X (formerly Twitter), and Discord.
+- Scrapes promocodes from specified social media platforms (Twitter, Discord, Facebook and Instagram).
+- Automatically redeems promocodes on the CSGOCases website.
+- Textual User Interface (TUI) for monitoring bot activity and status.
+- Configurable settings for scraping intervals and social media credentials.
 
-## Installation
+## Running the Bot
 
 1. Clone the repository:
 
-   ```sh
-   git clone https://github.com/italoseara/cs-pro-scraper.git
-   cd cs-pro-scraper
+   ```bash
+   git clone https://github.com/italoseara/csgocases-bot
+   cd csgocases-bot
    ```
 
-2. Install the required dependencies:
+2. Use `uv` to run the bot:
 
-   ```sh
-   pip install -r requirements.txt
+   ```bash
+   uv run src/main.py
    ```
 
-3. Install Tesseract OCR:
+3. Follow the on-screen instructions in the TUI to configure and start the bot.
 
-   - Windows:
+## Configuration
 
-     Check the [Official Tesseract OCR Installation Guide](https://github.com/UB-Mannheim/tesseract/wiki) for Windows.
+The bot can be configured through the TUI. You can set your social media credentials, scraping intervals, and other settings directly within the interface.
 
-   - Linux:
+To find the `X Auth Token` and `X CSRF Token` for X (formerly Twitter), you can use your browser's developer tools while logged into your account. Look for `auth_token` and `ct0` cookies respectively in the storage section.
 
-     ```sh
-     sudo apt install tesseract-ocr
-     ```
+To find the `Discord Auth Token`, you can use your browser's developer tools while logged into your Discord account. Look for `Authorization` header in the network requests.
 
-   - macOS:
+## Dependencies
 
-     ```sh
-     brew install tesseract
-     ```
+- Python 3.12+
+- Textual
+- Selenium
+- Other dependencies listed in `pyproject.toml`
 
-4. Create a file in the root directory called `.env` and add the following environment variables:
+## Contributing
 
-   ```env
-   IG_USERNAME=your_instagram_username
-   FB_USERNAME=your_facebook_username
-   X_USERNAME=your_x_username
-   
-   DISCORD_GUILD_ID=your_discord_guild_id
-   DISCORD_CHANNEL_ID=your_discord_channel_id
-   ```
-
-> [!NOTE]
-> The `DISCORD_GUILD_ID` and `DISCORD_CHANNEL_ID` can be obtained by activating the Developer Mode in Discord and right-clicking on the guild and channel, respectively to copy their IDs.
-
-## Usage
-
-Run the scraper:
-
-```sh
-python src/main.py
-```
-
-Fill the input fields with the required information and press the "Force Start" button.
-
-> [!NOTE]
-> The `X Auth Token` and `X CSRF Token` are required for the X scraper. They can be obtained by inspecting the X website and looking for the `auth_token` and `ct0` keys respectively in the Application tab in the Cookies section.
->
-> The `Discord API Key` can be obtained by looking for the `Authorization` header in the Network tab of the Discord website.
->
-> The `CS.PRO Cookie` can be obtained by logging into the [cs.pro](https://cs.pro) website with steam and copying the `sfRemember` cookie. If you dont provide this, the scraper will not try to activate the promocodes by itself.
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

@@ -1,0 +1,17 @@
+[project]
+name = "csgocases-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bs4>=0.0.2",
+    "discord-webhook>=1.4.1",
+    "easyocr>=1.7.2",
+    "pillow>=12.0.0",
+    "psycopg2>=2.9.11",
+    "setuptools>=80.9.0",
+    "textual>=6.8.0",
+    "textual-dev>=1.8.0",
+    "undetected-chromedriver>=3.5.5",
+]
