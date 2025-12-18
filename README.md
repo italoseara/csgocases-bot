@@ -5,8 +5,11 @@ This project is a bot designed to interact with the CSGOCases platform, scraping
 > [!CAUTION]
 > Using bots to interact with websites may violate their terms of service. Use at your own risk, the author is not responsible for any misuse or damages caused by this software.
 
-> [!IMPORTANT] 
-> [csgocases.com](https://csgocases.com) is a gambling platform. I do not endorse or encourage gambling. This bot is not a gambling tool, but rather a utility to automate the process of redeeming promocodes. Please gamble responsibly and be aware of the risks involved.
+> [!WARNING] 
+> CSGOCases is a gambling platform. I do not endorse or encourage gambling. This bot is not a gambling tool, but rather a utility to automate the process of redeeming promocodes. Please gamble responsibly and be aware of the risks involved.
+
+> [!IMPORTANT]
+> I am not affiliated with CSGOCases or any of the social media platforms used for scraping promocodes. This project is for educational purposes only.
 
 ## Features
 
