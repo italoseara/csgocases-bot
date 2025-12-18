@@ -73,3 +73,18 @@ class PromocodeRepository:
                 cursor.execute(select_query, (post_url,))
                 exists = cursor.fetchone()[0]
         return exists
+
+    def exists_by_code(self, code: str) -> bool:
+        """Check if a promocode exists by code."""
+
+        with self.connect() as conn:
+            with conn.cursor() as cursor:
+                select_query = """
+                SELECT EXISTS(
+                    SELECT 1 FROM promocodes WHERE code = %s
+                )
+                """
+
+                cursor.execute(select_query, (code,))
+                exists = cursor.fetchone()[0]
+        return exists
