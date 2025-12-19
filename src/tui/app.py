@@ -121,26 +121,30 @@ class CSGOCasesApp(App):
 
         posts: list[Post] = []
 
-        self.info("Scraping X (Twitter)...")
-        posts.append(
-            XTwitterAPI(
-                auth_token=self.settings.x_auth_token,
-                csrf_token=self.settings.x_csrf_token,
-            ).fetch_latest_post(X_USERNAME)
-        )
+        if self.settings.enable_x_scraper:
+            self.info("Scraping X (Twitter)...")
+            posts.append(
+                XTwitterAPI(
+                    auth_token=self.settings.x_auth_token,
+                    csrf_token=self.settings.x_csrf_token,
+                ).fetch_latest_post(X_USERNAME)
+            )
 
-        self.info("Scraping Discord...")
-        posts.append(
-            DiscordAPI(
-                auth_token=self.settings.discord_auth_token,
-            ).fetch_latest_post(DISCORD_GUILD_ID, DISCORD_CHANNEL_ID)
-        )
+        if self.settings.enable_discord_scraper:
+            self.info("Scraping Discord...")
+            posts.append(
+                DiscordAPI(
+                    auth_token=self.settings.discord_auth_token,
+                ).fetch_latest_post(DISCORD_GUILD_ID, DISCORD_CHANNEL_ID)
+            )
 
-        self.info("Scraping Facebook...")
-        posts.append(FacebookAPI().fetch_latest_post(FACEBOOK_USERNAME))
+        if self.settings.enable_facebook_scraper:
+            self.info("Scraping Facebook...")
+            posts.append(FacebookAPI().fetch_latest_post(FACEBOOK_USERNAME))
 
-        self.info("Scraping Instagram...")
-        posts.append(InstagramAPI().fetch_latest_post(INSTAGRAM_USERNAME))
+        if self.settings.enable_instagram_scraper:
+            self.info("Scraping Instagram...")
+            posts.append(InstagramAPI().fetch_latest_post(INSTAGRAM_USERNAME))
 
         self.info("Analyzing posts...")
         for post in posts:
